@@ -14,15 +14,10 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
+import { signIn, signOut } from "next-auth/react";
 
 import { classNames } from "@/utils/classNames";
 
-const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
-  imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-};
 const navigation = [
   { name: "Home", href: "#", current: true },
   { name: "Profile", href: "#", current: false },
@@ -30,13 +25,23 @@ const navigation = [
   { name: "Company Directory", href: "#", current: false },
   { name: "Openings", href: "#", current: false },
 ];
-const userNavigation = [
+
+const userNavigationGuest = [{ name: "Sign in", href: "#" }];
+const userNavigationMember = [
   { name: "Your Profile", href: "#" },
   { name: "Settings", href: "#" },
   { name: "Sign out", href: "#" },
 ];
 
-export default function Header() {
+export default function Header({ session }) {
+  const user = {
+    name: session ? session.user.name : "Guest",
+    email: session ? session.user.email : "unknown",
+    imageUrl: session
+      ? session.user.image
+      : "https://images.unsplash.com/photo-1589254066213-a0c9dc853511?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  };
+
   return (
     <Popover as="header" className="bg-indigo-600 pb-24">
       {({ open }) => (
@@ -57,6 +62,27 @@ export default function Header() {
 
               {/* Right section on desktop */}
               <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
+                {!session && (
+                  <form
+                    action={async () => {
+                      // "use server";
+                      await signIn();
+                    }}
+                  >
+                    <button>Sign In</button>
+                  </form>
+                )}
+                {session && (
+                  <form
+                    action={async () => {
+                      // "use server";
+                      await signOut();
+                    }}
+                  >
+                    <button>Sign Out</button>
+                  </form>
+                )}
+
                 <button
                   type="button"
                   className="relative flex-shrink-0 rounded-full p-1 text-indigo-200 hover:bg-white hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
@@ -85,7 +111,7 @@ export default function Header() {
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <MenuItems className="absolute -right-2 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      {userNavigation.map((item) => (
+                      {userNavigationGuest.map((item) => (
                         <MenuItem key={item.name}>
                           {({ focus }) => (
                             <a
@@ -291,7 +317,7 @@ export default function Header() {
                         </button>
                       </div>
                       <div className="mt-3 space-y-1 px-2">
-                        {userNavigation.map((item) => (
+                        {userNavigationGuest.map((item) => (
                           <a
                             key={item.name}
                             href={item.href}
