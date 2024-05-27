@@ -63,24 +63,12 @@ export default function Header({ session }) {
               {/* Right section on desktop */}
               <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
                 {!session && (
-                  <form
-                    action={async () => {
-                      // "use server";
-                      await signIn();
-                    }}
-                  >
-                    <button>Sign In</button>
-                  </form>
+                  <button onClick={async () => await signIn()}>Sign In</button>
                 )}
                 {session && (
-                  <form
-                    action={async () => {
-                      // "use server";
-                      await signOut();
-                    }}
-                  >
-                    <button>Sign Out</button>
-                  </form>
+                  <button onClick={async () => await signOut()}>
+                    Sign Out
+                  </button>
                 )}
 
                 <button

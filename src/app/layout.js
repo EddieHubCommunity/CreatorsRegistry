@@ -16,7 +16,6 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const session = await getServerSession(authOptions);
-  console.log("SESSION", session);
 
   return (
     <html lang="en" className="h-full bg-gray-100">
