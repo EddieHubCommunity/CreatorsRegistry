@@ -26,11 +26,9 @@ const navigation = [
   { name: "Openings", href: "#", current: false },
 ];
 
-const userNavigationGuest = [{ name: "Sign in", href: "#" }];
 const userNavigationMember = [
   { name: "Your Profile", href: "#" },
   { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
 ];
 
 export default function Header({ session }) {
@@ -63,60 +61,63 @@ export default function Header({ session }) {
               {/* Right section on desktop */}
               <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
                 {!session && (
-                  <button onClick={async () => await signIn()}>Sign In</button>
+                  <button
+                    type="button"
+                    className="text-indigo-100 rounded-md bg-white bg-opacity-0 px-3 py-2 text-sm font-medium hover:bg-opacity-10"
+                    onClick={async () => await signIn()}
+                  >
+                    Sign In
+                  </button>
                 )}
                 {session && (
-                  <button onClick={async () => await signOut()}>
+                  <button
+                    type="button"
+                    className="text-indigo-100 rounded-md bg-white bg-opacity-0 px-3 py-2 text-sm font-medium hover:bg-opacity-10"
+                    onClick={async () => await signOut()}
+                  >
                     Sign Out
                   </button>
                 )}
 
-                <button
-                  type="button"
-                  className="relative flex-shrink-0 rounded-full p-1 text-indigo-200 hover:bg-white hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
-
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-4 flex-shrink-0">
-                  <div>
-                    <MenuButton className="relative flex rounded-full bg-white text-sm ring-2 ring-white ring-opacity-20 focus:outline-none focus:ring-opacity-100">
-                      <span className="absolute -inset-1.5" />
-                      <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src={user.imageUrl}
-                        alt=""
-                      />
-                    </MenuButton>
-                  </div>
-                  <Transition
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <MenuItems className="absolute -right-2 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      {userNavigationGuest.map((item) => (
-                        <MenuItem key={item.name}>
-                          {({ focus }) => (
-                            <a
-                              href={item.href}
-                              className={classNames(
-                                focus ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
-                            >
-                              {item.name}
-                            </a>
-                          )}
-                        </MenuItem>
-                      ))}
-                    </MenuItems>
-                  </Transition>
-                </Menu>
+                {session && (
+                  <Menu as="div" className="relative ml-4 flex-shrink-0">
+                    <div>
+                      <MenuButton className="relative flex rounded-full bg-white text-sm ring-2 ring-white ring-opacity-20 focus:outline-none focus:ring-opacity-100">
+                        <span className="absolute -inset-1.5" />
+                        <span className="sr-only">Open user menu</span>
+                        <img
+                          className="h-8 w-8 rounded-full"
+                          src={user.imageUrl}
+                          alt=""
+                        />
+                      </MenuButton>
+                    </div>
+                    <Transition
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
+                    >
+                      <MenuItems className="absolute -right-2 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        {userNavigationMember.map((item) => (
+                          <MenuItem key={item.name}>
+                            {({ focus }) => (
+                              <a
+                                href={item.href}
+                                className={classNames(
+                                  focus ? "bg-gray-100" : "",
+                                  "block px-4 py-2 text-sm text-gray-700"
+                                )}
+                              >
+                                {item.name}
+                              </a>
+                            )}
+                          </MenuItem>
+                        ))}
+                      </MenuItems>
+                    </Transition>
+                  </Menu>
+                )}
               </div>
 
               {/* Search */}
@@ -278,44 +279,56 @@ export default function Header({ session }) {
                         </a>
                       </div>
                     </div>
-                    <div className="pb-2 pt-4">
-                      <div className="flex items-center px-5">
-                        <div className="flex-shrink-0">
-                          <img
-                            className="h-10 w-10 rounded-full"
-                            src={user.imageUrl}
-                            alt=""
-                          />
-                        </div>
-                        <div className="ml-3 min-w-0 flex-1">
-                          <div className="truncate text-base font-medium text-gray-800">
-                            {user.name}
-                          </div>
-                          <div className="truncate text-sm font-medium text-gray-500">
-                            {user.email}
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                        >
-                          <span className="absolute -inset-1.5" />
-                          <span className="sr-only">View notifications</span>
-                          <BellIcon className="h-6 w-6" aria-hidden="true" />
-                        </button>
-                      </div>
-                      <div className="mt-3 space-y-1 px-2">
-                        {userNavigationGuest.map((item) => (
+                    {!session && (
+                      <div className="pb-2 pt-4">
+                        <div className="mt-3 space-y-1 px-2">
                           <a
-                            key={item.name}
-                            href={item.href}
+                            onClick={async () => signIn()}
                             className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
                           >
-                            {item.name}
+                            Sign In
                           </a>
-                        ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
+                    {session && (
+                      <div className="pb-2 pt-4">
+                        <div className="flex items-center px-5">
+                          <div className="flex-shrink-0">
+                            <img
+                              className="h-10 w-10 rounded-full"
+                              src={user.imageUrl}
+                              alt=""
+                            />
+                          </div>
+                          <div className="ml-3 min-w-0 flex-1">
+                            <div className="truncate text-base font-medium text-gray-800">
+                              {user.name}
+                            </div>
+                            <div className="truncate text-sm font-medium text-gray-500">
+                              {user.email}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="mt-3 space-y-1 px-2">
+                          {userNavigationMember.map((item) => (
+                            <a
+                              key={item.name}
+                              href={item.href}
+                              className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
+                            >
+                              {item.name}
+                            </a>
+                          ))}
+                          <a
+                            onClick={async () => signOut()}
+                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
+                          >
+                            Sign Out
+                          </a>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </PopoverPanel>
               </TransitionChild>
