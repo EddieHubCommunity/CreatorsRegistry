@@ -239,36 +239,15 @@ export default function Header({ session }) {
                         </div>
                       </div>
                       <div className="mt-3 space-y-1 px-2">
-                        <a
-                          href="#"
-                          className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
-                        >
-                          Home
-                        </a>
-                        <a
-                          href="#"
-                          className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
-                        >
-                          Profile
-                        </a>
-                        <a
-                          href="#"
-                          className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
-                        >
-                          Resources
-                        </a>
-                        <a
-                          href="#"
-                          className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
-                        >
-                          Company Directory
-                        </a>
-                        <a
-                          href="#"
-                          className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
-                        >
-                          Openings
-                        </a>
+                        {navigation.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
+                          >
+                            {item.name}
+                          </a>
+                        ))}
                       </div>
                     </div>
                     {!session && (
