@@ -26,11 +26,6 @@ const navigation = [
   { name: "Openings", href: "#", current: false },
 ];
 
-const userNavigationMember = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
-];
-
 export default function Header({ session }) {
   const user = {
     name: session ? session.user.name : "Guest",
@@ -39,6 +34,11 @@ export default function Header({ session }) {
       ? session.user.image
       : "https://images.unsplash.com/photo-1589254066213-a0c9dc853511?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   };
+  const userNavigationMember = [
+    { name: "Your Profile", href: "#" },
+    { name: "Settings", href: "#" },
+    { name: "Sign Out", onClick: async () => await signOut() },
+  ];
 
   return (
     <Popover as="header" className="bg-indigo-600 pb-24">
@@ -69,15 +69,6 @@ export default function Header({ session }) {
                     Sign In
                   </button>
                 )}
-                {session && (
-                  <button
-                    type="button"
-                    className="text-indigo-100 rounded-md bg-white bg-opacity-0 px-3 py-2 text-sm font-medium hover:bg-opacity-10"
-                    onClick={async () => await signOut()}
-                  >
-                    Sign Out
-                  </button>
-                )}
 
                 {/* Profile dropdown */}
                 {session && (
@@ -104,6 +95,7 @@ export default function Header({ session }) {
                             {({ focus }) => (
                               <a
                                 href={item.href}
+                                onClick={item.onClick}
                                 className={classNames(
                                   focus ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm text-gray-700"
@@ -315,17 +307,12 @@ export default function Header({ session }) {
                             <a
                               key={item.name}
                               href={item.href}
+                              onClick={item.onClick}
                               className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
                             >
                               {item.name}
                             </a>
                           ))}
-                          <a
-                            onClick={async () => signOut()}
-                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
-                          >
-                            Sign Out
-                          </a>
                         </div>
                       </div>
                     )}
