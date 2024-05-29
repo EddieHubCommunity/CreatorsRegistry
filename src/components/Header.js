@@ -17,6 +17,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { signIn, signOut } from "next-auth/react";
 
 import { classNames } from "@/utils/classNames";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
@@ -41,7 +42,7 @@ export default function Header({ session }) {
   ];
 
   return (
-    <Popover as="header" className="bg-indigo-600 pb-24">
+    <Popover as="header" className="bg-purple-800 pb-24">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -50,10 +51,12 @@ export default function Header({ session }) {
               <div className="absolute left-0 flex-shrink-0 lg:static">
                 <a href="#">
                   <span className="sr-only">Your Company</span>
-                  <img
+                  <Image
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
-                    alt="Your Company"
+                    src="/logo.svg"
+                    width={100}
+                    height={100}
+                    alt="Content Cerators"
                   />
                 </a>
               </div>
