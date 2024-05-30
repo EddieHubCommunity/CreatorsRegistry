@@ -29,6 +29,13 @@ const authOptions = {
       },
     }),
   ],
+  callbacks: {
+    async session({ session, token, user }) {
+      session.user.id = user.id;
+
+      return session;
+    },
+  },
 };
 
 const handler = NextAuth(authOptions);

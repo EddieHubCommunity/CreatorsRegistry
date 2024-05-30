@@ -12,15 +12,15 @@ import {
   Transition,
   TransitionChild,
 } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { signIn, signOut } from "next-auth/react";
-
-import { classNames } from "@/utils/classNames";
 import Image from "next/image";
 
+import { classNames } from "@/utils/classNames";
+
 const navigation = [
-  { name: "Home", href: "#", current: true },
+  { name: "Home", href: "/", current: true },
   { name: "Profile", href: "#", current: false },
   { name: "Resources", href: "#", current: false },
   { name: "Company Directory", href: "#", current: false },
@@ -36,7 +36,7 @@ export default function Header({ session }) {
       : "https://images.unsplash.com/photo-1589254066213-a0c9dc853511?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   };
   const userNavigationMember = [
-    { name: "Your Profile", href: "#" },
+    { name: "Your Profile", href: "/account/profile" },
     { name: "Settings", href: "#" },
     { name: "Sign Out", onClick: async () => await signOut() },
   ];
