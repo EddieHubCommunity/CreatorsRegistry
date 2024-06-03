@@ -5,17 +5,28 @@ import { useFormState } from "react-dom";
 import { profileUpdate } from "./action";
 import { SubmitButton } from "@/components/forms/SubmitButton";
 import Input from "@/components/forms/Input";
+import Alert from "@/components/Alert";
 
 const initialState = {
-  bio: "",
-  website: "",
+  success: undefined,
+  errors: undefined,
 };
 
 export default function Form({ user }) {
   const [state, formAction] = useFormState(profileUpdate, initialState);
-
+  console.log(state);
   return (
     <form action={formAction}>
+      {state.success && <Alert type="success" message="Saved" />}
+      {state.errors && (
+        <Alert
+          type="error"
+          message="Error"
+          details={Object.entries(state.errors).map(
+            (item) => `${item[0]}: ${item[1].join(", ")}`
+          )}
+        />
+      )}
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
