@@ -15,7 +15,7 @@ const initialState = {
 
 export default function Form({ user }) {
   const [state, formAction] = useFormState(profileUpdate, initialState);
-  console.log(state);
+
   return (
     <form action={formAction}>
       {state.success && <Alert type="success" message="Saved" />}

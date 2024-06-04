@@ -1,3 +1,6 @@
+import List from "@/components/members/List";
+import Member from "@/components/members/member";
+
 export default function Page() {
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -11,7 +14,9 @@ export default function Page() {
               Section title
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
-              <div className="p-6">{/* Your content */}</div>
+              <div className="p-6">
+                <List />
+              </div>
             </div>
           </section>
         </div>
