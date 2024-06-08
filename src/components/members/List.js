@@ -1,11 +1,14 @@
-import { PrismaClient } from "@prisma/client";
-
+import prisma from "@/models/db";
 import Member from "./Member";
 
-const prisma = new PrismaClient();
-
 export default async function List() {
-  const members = await prisma.user.findMany();
+  const members = await prisma.user.findMany({
+    where: {
+      username: {
+        not: null,
+      },
+    },
+  });
 
   return (
     <ul role="list" className="divide-y divide-gray-100">

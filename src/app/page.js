@@ -1,5 +1,4 @@
 import List from "@/components/members/List";
-import Member from "@/components/members/member";
 
 export default function Page() {
   return (

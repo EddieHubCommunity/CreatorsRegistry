@@ -1,14 +1,13 @@
 "use server";
 
 import { getServerSession } from "next-auth/next";
-import { PrismaClient } from "@prisma/client";
 
+import prisma from "@/models/db";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import User from "@/models/User";
 
-const prisma = new PrismaClient();
-
 export async function profileUpdate(prevState, formData) {
+  const username = formData.get("username");
   const bio = formData.get("bio");
   const website = formData.get("website");
 
@@ -18,16 +17,34 @@ export async function profileUpdate(prevState, formData) {
     throw new Error("Not authenticated");
   }
 
-  const validate = User({ bio, website });
-  console.log(validate);
+  const validate = User({ bio, website, username });
+
   if (!validate.success) {
     return validate;
+  }
+
+  // check username doesn't already exist in db
+  const user = await prisma.user.findUnique({
+    where: { username },
+  });
+
+  // only throw an error if there is a set username
+  // and a user is found that does not match the authenticated user
+  if (username && user && user.id !== session.user.id) {
+    return {
+      success: false,
+      errors: {
+        username: [
+          `The username "${username}" is not unique, please try again`,
+        ],
+      },
+    };
   }
 
   // save to db
   await prisma.user.update({
     where: { id: session.user.id },
-    data: { bio, website },
+    data: { bio, website, username },
   });
 
   return validate;

@@ -2,9 +2,7 @@ import NextAuth from "next-auth";
 import LinkedInProvider from "next-auth/providers/linkedin";
 
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from "@/models/db";
 
 const authOptions = {
   adapter: PrismaAdapter(prisma),

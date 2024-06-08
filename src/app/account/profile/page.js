@@ -1,11 +1,10 @@
 import { redirect } from "next/navigation";
-import { PrismaClient } from "@prisma/client";
 import { getServerSession } from "next-auth/next";
 
+import prisma from "@/models/db";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import Form from "./form";
-
-const prisma = new PrismaClient();
+import Alert from "@/components/Alert";
 
 export default async function Page() {
   // check authentication
@@ -31,6 +30,12 @@ export default async function Page() {
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
               <div className="p-6">
+                {!user.username && (
+                  <Alert
+                    type="warning"
+                    message="You must set a unique username for your profile to be active"
+                  />
+                )}
                 <Form user={user} />
               </div>
             </div>
