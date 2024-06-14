@@ -14,7 +14,7 @@ export default function Member({ member }) {
         />
         <div className="min-w-0 flex-auto">
           <p className="text-sm font-semibold leading-6 text-gray-900">
-            <a href={member.href}>
+            <a href={`/${member.username}`}>
               <span className="absolute inset-x-0 -top-px bottom-0" />
               {member.name}
             </a>

@@ -21,10 +21,7 @@ import { classNames } from "@/utils/classNames";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
-  { name: "Profile", href: "#", current: false },
-  { name: "Resources", href: "#", current: false },
-  { name: "Company Directory", href: "#", current: false },
-  { name: "Openings", href: "#", current: false },
+  { name: "Search", href: "#", current: false },
 ];
 
 export default function Header({ session }) {
