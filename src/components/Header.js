@@ -32,9 +32,9 @@ export default function Header({ session }) {
       ? session.user.image
       : "https://images.unsplash.com/photo-1589254066213-a0c9dc853511?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   };
-  const userNavigationMember = [
+  const userNavigationAuth = [
     { name: "Your Profile", href: "/account/profile" },
-    { name: "Settings", href: "#" },
+    { name: "Your Links", href: "/account/links" },
     { name: "Sign Out", onClick: async () => await signOut() },
   ];
 
@@ -90,7 +90,7 @@ export default function Header({ session }) {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <MenuItems className="absolute -right-2 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        {userNavigationMember.map((item) => (
+                        {userNavigationAuth.map((item) => (
                           <MenuItem key={item.name}>
                             {({ focus }) => (
                               <a
@@ -282,7 +282,7 @@ export default function Header({ session }) {
                           </div>
                         </div>
                         <div className="mt-3 space-y-1 px-2">
-                          {userNavigationMember.map((item) => (
+                          {userNavigationAuth.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}

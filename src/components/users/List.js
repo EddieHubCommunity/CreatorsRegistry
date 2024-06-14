@@ -1,13 +1,13 @@
 import prisma from "@/models/db";
-import Member from "./Member";
+import User from "./User";
 
 export default async function List() {
-  const members = await prisma.user.findMany();
+  const users = await prisma.user.findMany();
 
   return (
     <ul role="list" className="divide-y divide-gray-100">
-      {members.map((item) => (
-        <Member member={item} />
+      {users.map((item) => (
+        <User user={item} />
       ))}
     </ul>
   );
