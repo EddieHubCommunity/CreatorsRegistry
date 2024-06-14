@@ -33,6 +33,15 @@ const authOptions = {
 
       return session;
     },
+    async signIn({ user, account, profile, email, credentials }) {
+      if (user.username) {
+        return true;
+      }
+
+      user.username = user.id.toLowerCase();
+
+      return true;
+    },
   },
 };
 

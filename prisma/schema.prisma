@@ -25,7 +25,7 @@ model User {
   Authenticator Authenticator[]
 
   // extra properties
-  username     String?          @unique
+  username     String           @unique
   bio          String?
   website      String?
 
