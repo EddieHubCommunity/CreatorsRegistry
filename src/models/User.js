@@ -2,7 +2,14 @@ import { z } from "zod";
 
 export default function User(user) {
   const schema = z.object({
-    username: z.string().max(64),
+    username: z
+      .string()
+      .max(64)
+      .regex(/^[a-z0-9-]+$/, {
+        message: "Can only contain lowercase characters, numbers and -",
+      })
+      .trim()
+      .toLowerCase(),
     bio: z.string().max(1024),
     website: z.string().url().optional().or(z.literal("")),
   });
