@@ -1,41 +1,36 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
-export default function User({ user }) {
+export default function Item({ data }) {
   return (
     <li
-      key={user.email}
+      key={data.id}
       className="relative flex justify-between gap-x-6 px-4 py-5 hover:bg-gray-50 sm:px-6 lg:px-8"
     >
       <div className="flex min-w-0 gap-x-4">
         <img
           className="h-12 w-12 flex-none rounded-full bg-gray-50"
-          src={user.image}
+          src={data.image}
           alt=""
         />
         <div className="min-w-0 flex-auto">
           <p className="text-sm font-semibold leading-6 text-gray-900">
-            <a href={`/${user.username}`}>
+            <a href={`/${data.url}`}>
               <span className="absolute inset-x-0 -top-px bottom-0" />
-              {user.name}
+              {data.urlText}
             </a>
           </p>
           <p className="mt-1 flex text-xs leading-5 text-gray-500">
-            <a
-              href={`mailto:${user.email}`}
-              className="relative truncate hover:underline"
-            >
-              {user.email}
-            </a>
+            {data.description}
           </p>
         </div>
       </div>
       <div className="flex shrink-0 items-center gap-x-4">
         <div className="hidden sm:flex sm:flex-col sm:items-end">
-          <p className="text-sm leading-6 text-gray-900">{user.role}</p>
-          {user.lastSeen ? (
+          <p className="text-sm leading-6 text-gray-900">{data.role}</p>
+          {data.lastSeen ? (
             <p className="mt-1 text-xs leading-5 text-gray-500">
               Last seen{" "}
-              <time dateTime={user.lastSeenDateTime}>{user.lastSeen}</time>
+              <time dateTime={data.lastSeenDateTime}>{data.lastSeen}</time>
             </p>
           ) : (
             <div className="mt-1 flex items-center gap-x-1.5">

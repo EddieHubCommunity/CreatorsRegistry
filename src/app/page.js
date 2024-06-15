@@ -1,6 +1,10 @@
-import List from "@/components/users/List";
+import prisma from "@/models/db";
 
-export default function Page() {
+import Items from "@/components/list/Items";
+
+export default async function Page() {
+  const users = await prisma.user.findMany();
+
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <h1 className="sr-only">Page title</h1>
@@ -14,7 +18,15 @@ export default function Page() {
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
               <div className="p-6">
-                <List />
+                <Items
+                  data={users.map((user) => ({
+                    id: user.email,
+                    image: user.image,
+                    url: user.username,
+                    urlText: user.name,
+                    description: user.email,
+                  }))}
+                />
               </div>
             </div>
           </section>
