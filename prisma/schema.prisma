@@ -28,6 +28,7 @@ model User {
   username     String           @unique
   bio          String?
   website      String?
+  platforms    Platform[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -86,4 +87,17 @@ model Authenticator {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@id([userId, credentialID])
+}
+
+model Platform {
+  id           String          @id @default(cuid())
+  userId       String
+  name         String
+  reach        String
+  price        Int
+  url          String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
