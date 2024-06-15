@@ -38,7 +38,7 @@ export default function Input({ name, value, error, prepend }) {
   );
 
   return (
-    <div className="sm:col-span-4">
+    <div className="col-span-full">
       <label
         htmlFor={name}
         className="block text-sm font-medium leading-6 text-gray-900"
