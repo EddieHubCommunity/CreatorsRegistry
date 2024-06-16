@@ -3,7 +3,11 @@ import prisma from "@/models/db";
 import Items from "@/components/list/Items";
 
 export default async function Page() {
-  const users = await prisma.user.findMany();
+  const users = await prisma.user.findMany({
+    include: {
+      platforms: true,
+    },
+  });
 
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
