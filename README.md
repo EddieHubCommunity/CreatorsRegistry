@@ -1,4 +1,4 @@
-# Creators Registry
+# Creators Registry ![](./public/logo.svg)
 
 ## Technologies
 
