@@ -5,6 +5,9 @@ import prisma from "@/models/db";
 export default async function Page({ params }) {
   const user = await prisma.user.findUnique({
     where: { username: params.username },
+    include: {
+      platforms: true,
+    },
   });
 
   if (!user) {
