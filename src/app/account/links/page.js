@@ -5,6 +5,7 @@ import prisma from "@/models/db";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import Alert from "@/components/Alert";
 import Items from "@/components/list/Items";
+import reach from "@/config/reach";
 import Form from "./form";
 
 export default async function Page() {
@@ -43,7 +44,9 @@ export default async function Page() {
                     icon: platform.name,
                     url: `?id=${platform.id}`,
                     urlText: platform.url,
-                    description: `${platform.reach} ($${platform.price})`,
+                    description: `${reach().data[platform.reach].name} ($${
+                      platform.price
+                    })`,
                   }))}
                 />
               </div>
