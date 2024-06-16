@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 
 export default function Item({ data }) {
@@ -23,10 +24,10 @@ export default function Item({ data }) {
         )}
         <div className="min-w-0 flex-auto">
           <p className="text-sm font-semibold leading-6 text-gray-900">
-            <a href={data.url}>
+            <Link href={data.url}>
               <span className="absolute inset-x-0 -top-px bottom-0" />
               {data.urlText}
-            </a>
+            </Link>
           </p>
           <p className="mt-1 flex text-xs leading-5 text-gray-500">
             {data.description}
