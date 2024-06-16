@@ -8,6 +8,10 @@ export default function platforms() {
       value: "youtube",
       display: "YouTube",
     },
+    linkedin: {
+      value: "linkedin",
+      display: "LinkedIn",
+    },
   };
   return {
     data,
