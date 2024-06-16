@@ -18,6 +18,7 @@ import { signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
 import { classNames } from "@/utils/classNames";
+import Link from "next/link";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -35,7 +36,7 @@ export default function Header({ session }) {
   const userNavigationAuth = [
     { name: "Your Profile", href: "/account/profile" },
     { name: "Your Links", href: "/account/links" },
-    { name: "Sign Out", onClick: async () => await signOut() },
+    { name: "Sign Out", href: "#", onClick: async () => await signOut() },
   ];
 
   return (
@@ -46,8 +47,8 @@ export default function Header({ session }) {
             <div className="relative flex items-center justify-center py-5 lg:justify-between">
               {/* Logo */}
               <div className="absolute left-0 flex-shrink-0 lg:static">
-                <a href="#">
-                  <span className="sr-only">Your Company</span>
+                <Link href="/">
+                  <span className="sr-only">Content Creators</span>
                   <Image
                     className="h-8 w-auto"
                     src="/logo.svg"
@@ -55,7 +56,7 @@ export default function Header({ session }) {
                     height={100}
                     alt="Content Cerators"
                   />
-                </a>
+                </Link>
               </div>
 
               {/* Right section on desktop */}
@@ -93,7 +94,7 @@ export default function Header({ session }) {
                         {userNavigationAuth.map((item) => (
                           <MenuItem key={item.name}>
                             {({ focus }) => (
-                              <a
+                              <Link
                                 href={item.href}
                                 onClick={item.onClick}
                                 className={classNames(
@@ -102,7 +103,7 @@ export default function Header({ session }) {
                                 )}
                               >
                                 {item.name}
-                              </a>
+                              </Link>
                             )}
                           </MenuItem>
                         ))}
@@ -155,7 +156,7 @@ export default function Header({ session }) {
                 <div className="col-span-2">
                   <nav className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className={classNames(
@@ -165,7 +166,7 @@ export default function Header({ session }) {
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
@@ -240,13 +241,13 @@ export default function Header({ session }) {
                       </div>
                       <div className="mt-3 space-y-1 px-2">
                         {navigation.map((item) => (
-                          <a
+                          <Link
                             key={item.name}
                             href={item.href}
                             className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -283,14 +284,14 @@ export default function Header({ session }) {
                         </div>
                         <div className="mt-3 space-y-1 px-2">
                           {userNavigationAuth.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
                               href={item.href}
                               onClick={item.onClick}
                               className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
                             >
                               {item.name}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
