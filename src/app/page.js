@@ -24,9 +24,9 @@ export default async function Page() {
               <div className="p-6">
                 <Items
                   data={users.map((user) => ({
-                    id: user.email,
+                    id: user.username,
                     image: user.image,
-                    url: user.username,
+                    url: `/${user.username}`,
                     urlText: user.name,
                     description: user.email,
                   }))}

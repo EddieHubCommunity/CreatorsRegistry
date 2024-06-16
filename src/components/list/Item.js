@@ -23,7 +23,7 @@ export default function Item({ data }) {
         )}
         <div className="min-w-0 flex-auto">
           <p className="text-sm font-semibold leading-6 text-gray-900">
-            <a href={`/${data.url}`}>
+            <a href={data.url}>
               <span className="absolute inset-x-0 -top-px bottom-0" />
               {data.urlText}
             </a>

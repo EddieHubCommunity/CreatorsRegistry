@@ -38,8 +38,8 @@ export default async function Page() {
                   />
                 )}
                 <Items
-                  data={platforms.map((platform) => ({
-                    id: platform.id,
+                  data={platforms.map((platform, key) => ({
+                    id: key,
                     icon: platform.name,
                     url: platform.url,
                     urlText: platform.url,
