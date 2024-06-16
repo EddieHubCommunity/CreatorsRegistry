@@ -1,12 +1,12 @@
 import { z } from "zod";
 
-import reach from "@/config/reach";
-import platforms from "@/config/platforms";
+import REACH from "@/config/reach";
+import PLATFORMS from "@/config/platforms";
 
 export default function Platform(platform) {
   const schema = z.object({
-    name: z.enum(platforms().enum),
-    reach: z.enum(reach().enum),
+    name: z.enum(PLATFORMS().enum),
+    reach: z.enum(REACH().enum),
     price: z.number().min(10),
     url: z.string().url(),
     example: z.string().url(),

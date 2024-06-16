@@ -33,7 +33,10 @@ export default async function Page() {
                     image: user.image,
                     url: `/${user.username}`,
                     urlText: user.name,
-                    description: user.email,
+                    description: user.bio,
+                    badges: user.platforms.map((platform) => ({
+                      icon: platform.name,
+                    })),
                   }))}
                 />
               </div>

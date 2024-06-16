@@ -6,14 +6,14 @@ export default function Item({ data }) {
   return (
     <li
       key={data.id}
-      className="relative flex justify-between gap-x-6 px-4 py-5 hover:bg-gray-50 sm:px-6 lg:px-8"
+      className="relative hover:bg-gray-50 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 py-5 sm:flex-nowrap"
     >
       <div className="flex min-w-0 gap-x-4">
         {data.image && (
           <img
             className="h-12 w-12 flex-none rounded-full bg-gray-50"
             src={data.image}
-            alt=""
+            alt={data.description}
           />
         )}
         {data.icon && (
@@ -34,28 +34,24 @@ export default function Item({ data }) {
           </p>
         </div>
       </div>
-      <div className="flex shrink-0 items-center gap-x-4">
-        <div className="hidden sm:flex sm:flex-col sm:items-end">
-          <p className="text-sm leading-6 text-gray-900">{data.role}</p>
-          {data.lastSeen ? (
-            <p className="mt-1 text-xs leading-5 text-gray-500">
-              Last seen{" "}
-              <time dateTime={data.lastSeenDateTime}>{data.lastSeen}</time>
-            </p>
-          ) : (
-            <div className="mt-1 flex items-center gap-x-1.5">
-              <div className="flex-none rounded-full bg-emerald-500/20 p-1">
-                <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              </div>
-              <p className="text-xs leading-5 text-gray-500">Online</p>
-            </div>
-          )}
+      <dl className="flex w-full flex-none justify-between gap-x-8 sm:w-auto">
+        <div className="flex -space-x-0.5">
+          <dt className="sr-only">Commenters</dt>
+          {data.badges &&
+            data.badges.map((badge, key) => (
+              <dd key={key}>
+                <SocialIcon
+                  network={badge.icon}
+                  className="h-6 w-6 rounded-full bg-gray-50 ring-2 ring-white"
+                />
+              </dd>
+            ))}
+          <ChevronRightIcon
+            className="h-5 w-5 flex-none text-gray-400"
+            aria-hidden="true"
+          />
         </div>
-        <ChevronRightIcon
-          className="h-5 w-5 flex-none text-gray-400"
-          aria-hidden="true"
-        />
-      </div>
+      </dl>
     </li>
   );
 }

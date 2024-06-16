@@ -1,4 +1,4 @@
-export default function reach() {
+export default function REACH() {
   const data = {
     nano: {
       value: "nano",

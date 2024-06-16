@@ -5,7 +5,8 @@ import prisma from "@/models/db";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import Alert from "@/components/Alert";
 import Items from "@/components/list/Items";
-import reach from "@/config/reach";
+import REACH from "@/config/reach";
+import PLATFORMS from "@/config/platforms";
 import Form from "./form";
 
 export default async function Page() {
@@ -43,10 +44,12 @@ export default async function Page() {
                     id: platform.id,
                     icon: platform.name,
                     url: `?id=${platform.id}`,
-                    urlText: platform.url,
-                    description: `${reach().data[platform.reach].name} ($${
+                    urlText: `${REACH().data[platform.reach].name} on ${
+                      PLATFORMS().data[platform.name].display
+                    } with ${REACH().data[platform.reach].group} (from $${
                       platform.price
                     })`,
+                    description: platform.description,
                   }))}
                 />
               </div>

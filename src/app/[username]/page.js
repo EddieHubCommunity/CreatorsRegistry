@@ -2,7 +2,8 @@ import { redirect } from "next/navigation";
 
 import prisma from "@/models/db";
 import Items from "@/components/list/Items";
-import reach from "@/config/reach";
+import REACH from "@/config/reach";
+import PLATFORMS from "@/config/platforms";
 
 export default async function Page({ params }) {
   const user = await prisma.user.findUnique({
@@ -79,10 +80,12 @@ export default async function Page({ params }) {
                     id: platform.id,
                     icon: platform.name,
                     url: platform.url,
-                    urlText: platform.url,
-                    description: `${reach().data[platform.reach].name} ($${
+                    urlText: `${REACH().data[platform.reach].name} on ${
+                      PLATFORMS().data[platform.name].display
+                    } with ${REACH().data[platform.reach].group} (from $${
                       platform.price
                     })`,
+                    description: platform.description,
                   }))}
                 />
               </div>

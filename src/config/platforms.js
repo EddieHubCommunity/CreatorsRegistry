@@ -1,4 +1,4 @@
-export default function platforms() {
+export default function PLATFORMS() {
   const data = {
     twitter: {
       value: "twitter",
