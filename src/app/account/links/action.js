@@ -30,6 +30,7 @@ export async function platformUpdate(id, prevState, formData) {
     await prisma.platform.update({
       where: {
         id,
+        userId: session.user.id,
       },
       data: {
         name,
