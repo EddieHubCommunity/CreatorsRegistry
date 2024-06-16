@@ -20,7 +20,7 @@
 
 <details>
     <summary>LinkedIn OAuth Details</summary>    
-![LinkedIn OAuth settings](https://github.com/EddieHubCommunity/CreatorsRegistry/assets/624760/c61a50eb-363e-4dcb-b208-405e256f7238)
+    <img width="1184" alt="Screenshot 2024-06-16 at 14 50 39" src="https://github.com/EddieHubCommunity/CreatorsRegistry/assets/624760/c61a50eb-363e-4dcb-b208-405e256f7238">
 </details>
 
 2. npm ci
