@@ -52,7 +52,12 @@ export default function Form({ user }) {
               value={user.website}
             />
 
-            <Textarea name="bio" error={state?.errors?.bio} value={user.bio} />
+            <Textarea
+              name="bio"
+              error={state?.errors?.bio}
+              value={user.bio}
+              description="Write a few sentences about yourself."
+            />
           </div>
         </div>
 

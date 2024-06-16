@@ -7,6 +7,11 @@ export default async function Page() {
     include: {
       platforms: true,
     },
+    where: {
+      platforms: {
+        some: {},
+      },
+    },
   });
 
   return (

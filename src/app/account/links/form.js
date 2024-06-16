@@ -10,6 +10,7 @@ import Alert from "@/components/Alert";
 import Select from "@/components/forms/Select";
 import platforms from "@/config/platforms";
 import reach from "@/config/reach";
+import Textarea from "@/components/forms/Textarea";
 
 const initialState = {
   success: undefined,
@@ -71,6 +72,19 @@ export default function Form({ data }) {
             />
 
             <Input name="url" error={state?.errors?.url} value={edit.url} />
+
+            <Input
+              name="example"
+              error={state?.errors?.example}
+              value={edit.example}
+            />
+
+            <Textarea
+              name="description"
+              description="Describe the type of content you create on this platform."
+              error={state?.errors?.description}
+              value={edit.description}
+            />
           </div>
         </div>
       </div>

@@ -12,6 +12,8 @@ export async function platformUpdate(id, prevState, formData) {
   const reach = formData.get("reach");
   const price = Number(formData.get("price"));
   const url = formData.get("url");
+  const example = formData.get("example");
+  const description = formData.get("description");
 
   // check authentication
   const session = await getServerSession(authOptions);
@@ -19,7 +21,7 @@ export async function platformUpdate(id, prevState, formData) {
     throw new Error("Not authenticated");
   }
 
-  const validate = Platform({ name, reach, price, url });
+  const validate = Platform({ name, reach, price, url, description, example });
 
   if (!validate.success) {
     return validate;
@@ -37,6 +39,8 @@ export async function platformUpdate(id, prevState, formData) {
         reach,
         price,
         url,
+        description,
+        example,
       },
     });
   } else {
@@ -51,6 +55,8 @@ export async function platformUpdate(id, prevState, formData) {
         reach,
         price,
         url,
+        description,
+        example,
       },
     });
   }

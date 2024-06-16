@@ -2,7 +2,13 @@ import { useFormStatus } from "react-dom";
 
 import { classNames } from "@/utils/classNames";
 
-export default function Textarea({ name, value, error, rows = 3 }) {
+export default function Textarea({
+  name,
+  value,
+  description,
+  error,
+  rows = 3,
+}) {
   const { pending } = useFormStatus();
   return (
     <div className="col-span-full">
@@ -29,9 +35,9 @@ export default function Textarea({ name, value, error, rows = 3 }) {
           defaultValue={value}
         />
       </div>
-      <p className="mt-3 text-sm leading-6 text-gray-600">
-        Write a few sentences about yourself.
-      </p>
+      {description && (
+        <p className="mt-3 text-sm leading-6 text-gray-600">{description}</p>
+      )}
       {error && (
         <p className="mt-2 text-sm text-red-600" id={`${name}-error`}>
           {error}
