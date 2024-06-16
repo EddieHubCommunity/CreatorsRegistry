@@ -5,6 +5,12 @@ export default function reach() {
       name: "Nano",
       group: "< 1k",
     },
+    // ...
+    pro: {
+      value: "pro",
+      name: "Pro",
+      group: "100k - 500k",
+    },
   };
   return {
     data,
