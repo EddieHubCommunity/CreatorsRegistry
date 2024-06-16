@@ -3,12 +3,10 @@ export default function platforms() {
     twitter: {
       value: "twitter",
       display: "Twitter (X)",
-      icon: "",
     },
     youtube: {
       value: "youtube",
       display: "YouTube",
-      icon: "",
     },
   };
   return {

@@ -18,6 +18,7 @@
     "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
+    "react-social-icons": "^6.16.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

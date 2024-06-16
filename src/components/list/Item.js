@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import { SocialIcon } from "react-social-icons";
 
 export default function Item({ data }) {
   return (
@@ -7,11 +8,19 @@ export default function Item({ data }) {
       className="relative flex justify-between gap-x-6 px-4 py-5 hover:bg-gray-50 sm:px-6 lg:px-8"
     >
       <div className="flex min-w-0 gap-x-4">
-        <img
-          className="h-12 w-12 flex-none rounded-full bg-gray-50"
-          src={data.image}
-          alt=""
-        />
+        {data.image && (
+          <img
+            className="h-12 w-12 flex-none rounded-full bg-gray-50"
+            src={data.image}
+            alt=""
+          />
+        )}
+        {data.icon && (
+          <SocialIcon
+            network={data.icon}
+            className="h-12 w-12 flex-none rounded-full bg-gray-50"
+          />
+        )}
         <div className="min-w-0 flex-auto">
           <p className="text-sm font-semibold leading-6 text-gray-900">
             <a href={`/${data.url}`}>
