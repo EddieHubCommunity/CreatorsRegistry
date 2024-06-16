@@ -5,8 +5,9 @@ import { getServerSession } from "next-auth/next";
 import prisma from "@/models/db";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import Platform from "@/models/Platform";
+import { revalidatePath } from "next/cache";
 
-export async function platformUpdate(prevState, formData) {
+export async function platformUpdate(id, prevState, formData) {
   const name = formData.get("name");
   const reach = formData.get("reach");
   const price = Number(formData.get("price"));
@@ -25,19 +26,34 @@ export async function platformUpdate(prevState, formData) {
   }
 
   // save to db
-  await prisma.platform.create({
-    data: {
-      user: {
-        connect: {
-          id: session.user.id,
-        },
+  if (id) {
+    await prisma.platform.update({
+      where: {
+        id,
       },
-      name,
-      reach,
-      price,
-      url,
-    },
-  });
+      data: {
+        name,
+        reach,
+        price,
+        url,
+      },
+    });
+  } else {
+    await prisma.platform.create({
+      data: {
+        user: {
+          connect: {
+            id: session.user.id,
+          },
+        },
+        name,
+        reach,
+        price,
+        url,
+      },
+    });
+  }
 
+  revalidatePath("/account/links");
   return validate;
 }

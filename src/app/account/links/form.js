@@ -1,6 +1,7 @@
 "use client";
 
 import { useFormState } from "react-dom";
+import { useSearchParams } from "next/navigation";
 
 import { platformUpdate } from "./action";
 import { SubmitButton } from "@/components/forms/SubmitButton";
@@ -15,8 +16,16 @@ const initialState = {
   errors: undefined,
 };
 
-export default function Form({ platform }) {
-  const [state, formAction] = useFormState(platformUpdate, initialState);
+export default function Form({ data }) {
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
+  let edit = {};
+
+  const platformUpdateWithId = platformUpdate.bind(null, id ? id : null);
+  const [state, formAction] = useFormState(platformUpdateWithId, initialState);
+  if (id) {
+    edit = data.filter((platform) => platform.id === id)[0];
+  }
 
   return (
     <form action={formAction}>
@@ -45,23 +54,23 @@ export default function Form({ platform }) {
               name="name"
               error={state?.errors?.name}
               options={platforms().select}
-              value={platform.name}
+              value={edit.name}
             />
 
             <Select
               name="reach"
               error={state?.errors?.reach}
               options={reach().select}
-              value={platform.reach}
+              value={edit.reach}
             />
 
             <Input
               name="price"
               error={state?.errors?.price}
-              value={platform.price}
+              value={edit.price}
             />
 
-            <Input name="url" error={state?.errors?.url} value={platform.url} />
+            <Input name="url" error={state?.errors?.url} value={edit.url} />
           </div>
         </div>
       </div>

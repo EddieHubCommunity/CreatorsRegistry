@@ -38,12 +38,12 @@ export default async function Page() {
                   />
                 )}
                 <Items
-                  data={platforms.map((platform, key) => ({
-                    id: key,
+                  data={platforms.map((platform) => ({
+                    id: platform.id,
                     icon: platform.name,
-                    url: platform.url,
+                    url: `?id=${platform.id}`,
                     urlText: platform.url,
-                    description: platform.reach,
+                    description: `${platform.reach} ($${platform.price})`,
                   }))}
                 />
               </div>
@@ -59,7 +59,7 @@ export default async function Page() {
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
               <div className="p-6">
-                <Form platform={{}} />
+                <Form data={platforms} />
               </div>
             </div>
           </section>
