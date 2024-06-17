@@ -362,7 +362,7 @@ export default function Form({ user }) {
         >
           Cancel
         </button>
-        <SubmitButton formAction={profileUpdate} />
+        <SubmitButton text="SAVE" />
       </div>
     </form>
   );
