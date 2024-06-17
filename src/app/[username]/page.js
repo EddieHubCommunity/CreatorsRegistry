@@ -1,10 +1,16 @@
 import { redirect } from "next/navigation";
+import {
+  CurrencyDollarIcon,
+  MegaphoneIcon,
+  ScaleIcon,
+  SignalIcon,
+} from "@heroicons/react/24/outline";
 
 import prisma from "@/models/db";
 import Items from "@/components/list/Items";
 import REACH from "@/config/reach";
 import PLATFORMS from "@/config/platforms";
-import { BriefcaseIcon } from "@heroicons/react/24/outline";
+import numberFormat from "@/utils/numberFormat";
 
 export default async function Page({ params }) {
   const user = await prisma.user.findUnique({
@@ -87,6 +93,24 @@ export default async function Page({ params }) {
                       platform.price
                     })`,
                     description: platform.description,
+                    meta: [
+                      {
+                        icon: MegaphoneIcon,
+                        text: REACH().data[platform.reach].name,
+                      },
+                      {
+                        icon: ScaleIcon,
+                        text: REACH().data[platform.reach].group,
+                      },
+                      {
+                        icon: SignalIcon,
+                        text: PLATFORMS().data[platform.name].display,
+                      },
+                      {
+                        icon: CurrencyDollarIcon,
+                        text: platform.price,
+                      },
+                    ],
                   }))}
                 />
               </div>
