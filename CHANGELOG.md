@@ -1,3 +1,12 @@
+## [0.4.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.4.0...v0.4.1) (2024-06-17)
+
+
+### Bug Fixes
+
+* sub domain name ([51dab1d](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/51dab1d8312e3fe071cdb0006d2a7ecff3cbc405))
+
+
+
 # [0.4.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.3.0...v0.4.0) (2024-06-17)
 
 
