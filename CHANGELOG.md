@@ -1,4 +1,18 @@
-# 0.2.0 (2024-06-17)
+# [0.3.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.2.0...v0.3.0) (2024-06-17)
+
+
+### Bug Fixes
+
+* update profile form button ([5a37387](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/5a37387c5abae74f122700dc07a71312f7bfc401))
+
+
+### Features
+
+* seed database with example data ([44db8f0](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/44db8f0834c76ed466e749aa6cec9653c3262fb0))
+
+
+
+# [0.2.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/6f1e4210a6b1bd6e4075b9b1e3c341609d36cb49...v0.2.0) (2024-06-17)
 
 
 ### Bug Fixes
