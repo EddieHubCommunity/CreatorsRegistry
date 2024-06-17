@@ -1,5 +1,7 @@
 # Creators Registry
 
+<img src="./public/logo.svg" width=35>
+
 A place for Creators to get paid for their content 💰. Companies don't only look for big influencers but also micro influencers. Join the platform and let them find you!
 
 ## Getting Started
