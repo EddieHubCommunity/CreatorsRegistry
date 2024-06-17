@@ -1,3 +1,13 @@
+# [0.4.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.3.0...v0.4.0) (2024-06-17)
+
+
+### Features
+
+* meta data in list items ([98c6a6b](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/98c6a6bd6b32590b642dc0c24422d062a6ff4a71))
+* profile page bio and website ([19c4f4c](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/19c4f4cd2667f49768e3e12bf3e9dbb3eea9c2a4))
+
+
+
 # [0.3.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.2.0...v0.3.0) (2024-06-17)
 
 
