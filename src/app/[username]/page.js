@@ -4,6 +4,7 @@ import prisma from "@/models/db";
 import Items from "@/components/list/Items";
 import REACH from "@/config/reach";
 import PLATFORMS from "@/config/platforms";
+import { BriefcaseIcon } from "@heroicons/react/24/outline";
 
 export default async function Page({ params }) {
   const user = await prisma.user.findUnique({
@@ -97,10 +98,13 @@ export default async function Page({ params }) {
         <div className="grid grid-cols-1 gap-4">
           <section aria-labelledby="section-2-title">
             <h2 className="sr-only" id="section-2-title">
-              Section title
+              User details
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
-              <div className="p-6">{/* Your content */}</div>
+              <div className="p-6">{user.bio}</div>
+              <a href={user.website} className="p-6">
+                {user.website}
+              </a>
             </div>
           </section>
         </div>
