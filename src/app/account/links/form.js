@@ -1,9 +1,10 @@
 "use client";
 
-import { useFormState } from "react-dom";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { useFormState } from "react-dom";
 
-import { platformUpdate } from "./action";
+import { platformDelete, platformUpdate } from "./action";
 import { SubmitButton } from "@/components/forms/SubmitButton";
 import Input from "@/components/forms/Input";
 import Alert from "@/components/Alert";
@@ -22,14 +23,14 @@ export default function Form({ data }) {
   const id = searchParams.get("id");
   let edit = {};
 
-  const platformUpdateWithId = platformUpdate.bind(null, id ? id : null);
-  const [state, formAction] = useFormState(platformUpdateWithId, initialState);
+  const [state, formAction] = useFormState(platformUpdate, initialState);
   if (id) {
     edit = data.filter((platform) => platform.id === id)[0];
   }
 
   return (
     <form action={formAction}>
+      {id && <Input type="hidden" name="id" value={id} />}
       {state.success && <Alert type="success" message="Saved" />}
       {state.errors && (
         <Alert
@@ -90,13 +91,14 @@ export default function Form({ data }) {
       </div>
 
       <div className="mt-6 flex items-center justify-end gap-x-6">
-        <button
-          type="button"
+        <Link
+          href="/account/links"
           className="text-sm font-semibold leading-6 text-gray-900"
         >
           Cancel
-        </button>
-        <SubmitButton formAction={platformUpdate} />
+        </Link>
+        {id && <SubmitButton text="DELETE" formAction={platformDelete} />}
+        <SubmitButton text="SAVE" />
       </div>
     </form>
   );

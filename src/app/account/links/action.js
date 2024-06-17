@@ -1,13 +1,15 @@
 "use server";
 
+import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 import { getServerSession } from "next-auth/next";
 
-import prisma from "@/models/db";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import prisma from "@/models/db";
 import Platform from "@/models/Platform";
-import { revalidatePath } from "next/cache";
 
-export async function platformUpdate(id, prevState, formData) {
+export async function platformUpdate(prevState, formData) {
+  const id = formData.get("id");
   const name = formData.get("name");
   const reach = formData.get("reach");
   const price = Number(formData.get("price"));
@@ -63,4 +65,36 @@ export async function platformUpdate(id, prevState, formData) {
 
   revalidatePath("/account/links");
   return validate;
+}
+
+export async function platformDelete(formData) {
+  const id = formData.get("id");
+
+  // check authentication
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    throw new Error("Not authenticated");
+  }
+
+  if (!id) {
+    return { success: false };
+  }
+
+  // delete from db
+  await prisma.user.update({
+    where: {
+      id: session.user.id,
+    },
+    data: {
+      platforms: {
+        delete: { id },
+      },
+    },
+    include: {
+      platforms: true,
+    },
+  });
+
+  revalidatePath("/account/links");
+  redirect("/account/links");
 }

@@ -2,11 +2,12 @@ import { useFormStatus } from "react-dom";
 
 import { classNames } from "@/utils/classNames";
 
-export function SubmitButton() {
+export function SubmitButton({ text, formAction }) {
   const { pending } = useFormStatus();
 
   return (
     <button
+      formAction={formAction}
       type="submit"
       disabled={pending}
       className={classNames(
@@ -14,7 +15,7 @@ export function SubmitButton() {
         pending ? "bg-gray-600" : "bg-indigo-600 hover:bg-indigo-500"
       )}
     >
-      Save
+      {text}
     </button>
   );
 }
