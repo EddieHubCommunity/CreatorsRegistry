@@ -3,12 +3,12 @@ import { ExclamationCircleIcon } from "@heroicons/react/20/solid";
 
 import { classNames } from "@/utils/classNames";
 
-export default function Input({ name, value, error, prepend }) {
+export default function Input({ name, value, error, prepend, type = "text" }) {
   const { pending } = useFormStatus();
 
   const input = (
     <input
-      type="text"
+      type={type}
       disabled={pending}
       name={name}
       id={name}
@@ -36,6 +36,10 @@ export default function Input({ name, value, error, prepend }) {
       {input}
     </div>
   );
+
+  if (type === "hidden") {
+    return input;
+  }
 
   return (
     <div className="col-span-full">
