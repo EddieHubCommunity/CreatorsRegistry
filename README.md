@@ -2,20 +2,24 @@
 
 A place for Creators to get paid for their content 💰. Companies don't only look for big influencers but also micro influencers. Join the platform and let them find you!
 
-## Technologies
+## Getting Started
+
+All contributions welcome, not just code.
+
+### Technologies
 
 - NextJS (AppRouter)
 - Prisma
 - Postgres
 - LinkedIn OAuth
 
-## Requirements
+### Requirements
 
 - NodeJS
 - Postgres
 - LinkedIn OAuth
 
-## Getting starts
+### Local development
 
 1. copy `.env.example` to `.env` and fill out parameters
    - For LinkedIn parameters create a developer app here https://developer.linkedin.com
@@ -27,3 +31,7 @@ A place for Creators to get paid for their content 💰. Companies don't only lo
 
 2. npm ci
 3. npm run dev
+
+## Join the EddieHub community
+
+Discord http://discord.eddiehub.org
