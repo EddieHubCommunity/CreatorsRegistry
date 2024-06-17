@@ -29,8 +29,10 @@ All contributions welcome, not just code.
     <img alt="LinkedIn OAuth screenshot of settings" src="https://github.com/EddieHubCommunity/CreatorsRegistry/assets/624760/c61a50eb-363e-4dcb-b208-405e256f7238">
 </details>
 
-2. npm ci
-3. npm run dev
+2. Install the dependencies `npm ci` from the package lock file (do not use `npm install` unless for a specific reason)
+3. Create the database tables `prisma migrate dev`
+4. Seed the database by inserting example data `db:dev:seed`
+5. Start the local dev server `npm run dev`
 
 ## Join the EddieHub community
 

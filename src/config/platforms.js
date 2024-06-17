@@ -1,18 +1,8 @@
+import config from "@/config/app";
+
 export default function PLATFORMS() {
-  const data = {
-    twitter: {
-      value: "twitter",
-      display: "Twitter (X)",
-    },
-    youtube: {
-      value: "youtube",
-      display: "YouTube",
-    },
-    linkedin: {
-      value: "linkedin",
-      display: "LinkedIn",
-    },
-  };
+  const data = config.platforms;
+
   return {
     data,
     enum: Object.values(data).map((platform) => platform.value),
