@@ -1,4 +1,4 @@
-# Creators Registry ![](./public/logo.svg)
+# Creators Registry <img src="./public/logo.svg" width=35>
 
 ## Technologies
 
