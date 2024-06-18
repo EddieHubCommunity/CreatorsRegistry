@@ -1,3 +1,12 @@
+# [0.7.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.6.0...v0.7.0) (2024-06-18)
+
+
+### Features
+
+* homepage features + lastest profiles ([c803561](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/c803561bbcf07eecb6b5e0a27acc018ef609ad15))
+
+
+
 # [0.6.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.5.0...v0.6.0) (2024-06-18)
 
 
@@ -37,15 +46,6 @@
 
 * database commands ([bfab631](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/bfab631dcd23778108a7467b8b2130ff9c9344d7))
 * local setup steps ([d704599](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/d7045993750a4fc44107db2d2c97aa444e7fdff0))
-
-
-
-## [0.4.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.4.0...v0.4.1) (2024-06-17)
-
-
-### Bug Fixes
-
-* sub domain name ([51dab1d](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/51dab1d8312e3fe071cdb0006d2a7ecff3cbc405))
 
 
 
