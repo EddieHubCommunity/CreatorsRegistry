@@ -2,6 +2,8 @@
 
 A place for Creators to get paid for their content 💰. Companies don't only look for big influencers but also micro influencers. Join the platform and let them find you!
 
+![App screenshot](https://github.com/EddieHubCommunity/CreatorsRegistry/assets/624760/10efe758-a712-43a0-aa61-947ad26361af)
+
 ## Getting Started
 
 All contributions welcome, not just code.
