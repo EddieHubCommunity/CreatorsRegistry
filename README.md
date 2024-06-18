@@ -30,8 +30,8 @@ All contributions welcome, not just code.
 </details>
 
 2. Install the dependencies `npm ci` from the package lock file (do not use `npm install` unless for a specific reason)
-3. Create the database tables `prisma migrate dev`
-4. Seed the database by inserting example data `db:dev:seed`
+3. Create the database tables `npm run db:dev:migrate` (for production use `npm run db:prod:migrate`)
+4. Seed the database by inserting example data `npm run db:dev:seed` (if you need to reset the database use `npm run db:dev:reset`)
 5. Start the local dev server `npm run dev`
 
 ## Join the EddieHub community
