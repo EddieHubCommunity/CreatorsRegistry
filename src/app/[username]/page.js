@@ -10,7 +10,6 @@ import prisma from "@/models/db";
 import Items from "@/components/list/Items";
 import REACH from "@/config/reach";
 import PLATFORMS from "@/config/platforms";
-import numberFormat from "@/utils/numberFormat";
 
 export default async function Page({ params }) {
   const user = await prisma.user.findUnique({

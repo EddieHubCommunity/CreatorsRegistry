@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth/next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import prisma from "@/models/db";
 
 import { classNames } from "@/utils/classNames";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
@@ -16,12 +17,22 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const session = await getServerSession(authOptions);
+  let user = {};
+
+  if (session) {
+    user = await prisma.user.findUnique({
+      where: { id: session.user.id },
+      include: {
+        platforms: true,
+      },
+    });
+  }
 
   return (
     <html lang="en" className="h-full bg-gray-100">
       <body className={classNames("h-full", inter.className)}>
         <div className="min-h-full">
-          <Header session={session} />
+          <Header session={session} user={user} />
           <main className="-mt-24 pb-8">{children}</main>
           <Footer />
         </div>
