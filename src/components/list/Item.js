@@ -39,12 +39,14 @@ export default function Item({ data }) {
         <dl className="flex w-full flex-none justify-between gap-x-8 sm:w-auto">
           <div className="flex -space-x-0.5">
             <dt className="sr-only">Social platforms</dt>
-            {data.badges &&
-              data.badges.map((badge, key) => (
+            {data.socials &&
+              data.socials.map((badge, key) => (
                 <dd key={key}>
                   <SocialIcon
                     network={badge.icon}
+                    label={badge.icon}
                     className="h-6 w-6 rounded-full bg-gray-50 ring-2 ring-white"
+                    style={{ height: 25, width: 25 }}
                   />
                 </dd>
               ))}
