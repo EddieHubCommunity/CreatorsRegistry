@@ -1,3 +1,12 @@
+# [0.6.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.5.0...v0.6.0) (2024-06-18)
+
+
+### Features
+
+* display highest reach + lowest cost ([76ab9f2](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/76ab9f2270c2dca50b861d8149b4a746e7667740))
+
+
+
 # [0.5.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.4.3...v0.5.0) (2024-06-18)
 
 
@@ -37,16 +46,6 @@
 ### Bug Fixes
 
 * sub domain name ([51dab1d](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/51dab1d8312e3fe071cdb0006d2a7ecff3cbc405))
-
-
-
-# [0.4.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.3.0...v0.4.0) (2024-06-17)
-
-
-### Features
-
-* meta data in list items ([98c6a6b](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/98c6a6bd6b32590b642dc0c24422d062a6ff4a71))
-* profile page bio and website ([19c4f4c](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/19c4f4cd2667f49768e3e12bf3e9dbb3eea9c2a4))
 
 
 
