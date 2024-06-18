@@ -1,11 +1,17 @@
+import { ArrowUpIcon, WifiIcon } from "@heroicons/react/24/outline";
 import prisma from "@/models/db";
 
 import Items from "@/components/list/Items";
+import REACH from "@/config/reach";
 
 export default async function Page() {
   const users = await prisma.user.findMany({
     include: {
-      platforms: true,
+      platforms: {
+        orderBy: {
+          price: "asc",
+        },
+      },
     },
     where: {
       platforms: {
@@ -37,6 +43,22 @@ export default async function Page() {
                     badges: user.platforms.map((platform) => ({
                       icon: platform.name,
                     })),
+                    meta: [
+                      // biggest reach
+                      {
+                        icon: WifiIcon,
+                        text: `Reach ${
+                          REACH().data[
+                            REACH().sortByLargest(user.platforms)[0].reach
+                          ].group
+                        }`,
+                      },
+                      // lowest price
+                      {
+                        icon: ArrowUpIcon,
+                        text: `From $${user.platforms[0].price}`,
+                      },
+                    ],
                   }))}
                 />
               </div>

@@ -38,7 +38,7 @@ export default function Item({ data }) {
         </div>
         <dl className="flex w-full flex-none justify-between gap-x-8 sm:w-auto">
           <div className="flex -space-x-0.5">
-            <dt className="sr-only">Commenters</dt>
+            <dt className="sr-only">Social platforms</dt>
             {data.badges &&
               data.badges.map((badge, key) => (
                 <dd key={key}>
@@ -57,8 +57,11 @@ export default function Item({ data }) {
       </div>
       {data.meta && (
         <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6 justify-center">
-          {data.meta.map((item) => (
-            <div className="mt-2 flex items-center text-sm text-gray-500">
+          {data.meta.map((item, idx) => (
+            <div
+              className="mt-2 flex items-center text-sm text-gray-500"
+              key={idx}
+            >
               <item.icon
                 className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
                 aria-hidden="true"
