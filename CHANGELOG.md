@@ -1,3 +1,17 @@
+# [0.5.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.4.3...v0.5.0) (2024-06-18)
+
+
+### Bug Fixes
+
+* header navigation link to my public profile ([3348a9c](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/3348a9ca9331b15ae496e0af4ff12241a686384a))
+
+
+### Features
+
+* my links list to show like public ([34efbd6](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/34efbd65bb4dfaac9e19468b089c84064592175c))
+
+
+
 ## [0.4.3](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.4.2...v0.4.3) (2024-06-18)
 
 
@@ -33,20 +47,6 @@
 
 * meta data in list items ([98c6a6b](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/98c6a6bd6b32590b642dc0c24422d062a6ff4a71))
 * profile page bio and website ([19c4f4c](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/19c4f4cd2667f49768e3e12bf3e9dbb3eea9c2a4))
-
-
-
-# [0.3.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.2.0...v0.3.0) (2024-06-17)
-
-
-### Bug Fixes
-
-* update profile form button ([5a37387](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/5a37387c5abae74f122700dc07a71312f7bfc401))
-
-
-### Features
-
-* seed database with example data ([44db8f0](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/44db8f0834c76ed466e749aa6cec9653c3262fb0))
 
 
 
