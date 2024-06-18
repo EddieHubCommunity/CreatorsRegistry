@@ -1,6 +1,6 @@
 {
   "name": "content-creators",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": false,
   "scripts": {
     "dev": "next dev",
