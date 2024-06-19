@@ -1,12 +1,13 @@
 {
   "name": "content-creators",
-  "version": "0.3.0",
+  "version": "0.7.0",
   "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "db:prod:migrate": "prisma migrate deploy",
     "db:dev:migrate": "prisma migrate dev",
     "db:dev:seed": "prisma db seed",
     "db:dev:reset": "prisma migrate reset"

@@ -16,28 +16,33 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { signIn, signOut } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { classNames } from "@/utils/classNames";
-import Link from "next/link";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
-  { name: "Search", href: "#", current: false },
+  { name: "Search", href: "/search", current: false },
 ];
 
-export default function Header({ session }) {
-  const user = {
+export default function Header({ session, user }) {
+  const profile = {
     name: session ? session.user.name : "Guest",
     email: session ? session.user.email : "unknown",
     imageUrl: session
       ? session.user.image
       : "https://images.unsplash.com/photo-1589254066213-a0c9dc853511?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   };
-  const userNavigationAuth = [
-    { name: "Your Profile", href: "/account/profile" },
-    { name: "Your Links", href: "/account/links" },
-    { name: "Sign Out", href: "#", onClick: async () => await signOut() },
-  ];
+  let userNavigationAuth = [];
+
+  if (user) {
+    userNavigationAuth = [
+      { name: "Your Profile", href: `/${user.username}` },
+      { name: "Your Links", href: "/account/links" },
+      { name: "Settings", href: "/account/profile" },
+      { name: "Sign Out", href: "#", onClick: async () => await signOut() },
+    ];
+  }
 
   return (
     <Popover as="header" className="bg-purple-800 pb-24">
@@ -80,7 +85,7 @@ export default function Header({ session }) {
                         <span className="sr-only">Open user menu</span>
                         <img
                           className="h-8 w-8 rounded-full"
-                          src={user.imageUrl}
+                          src={profile.imageUrl}
                           alt=""
                         />
                       </MenuButton>
@@ -271,16 +276,16 @@ export default function Header({ session }) {
                           <div className="flex-shrink-0">
                             <img
                               className="h-10 w-10 rounded-full"
-                              src={user.imageUrl}
+                              src={profile.imageUrl}
                               alt=""
                             />
                           </div>
                           <div className="ml-3 min-w-0 flex-1">
                             <div className="truncate text-base font-medium text-gray-800">
-                              {user.name}
+                              {profile.name}
                             </div>
                             <div className="truncate text-sm font-medium text-gray-500">
-                              {user.email}
+                              {profile.email}
                             </div>
                           </div>
                         </div>
