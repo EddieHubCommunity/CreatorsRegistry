@@ -34,6 +34,14 @@ All contributions welcome, not just code.
 4. Seed the database by inserting example data `db:dev:seed`
 5. Start the local dev server `npm run dev`
 
+### Run Postgres using docker 
+
+#### Requirement 
+- Must have docker installed 
+```bash
+docker-compose up -d
+``` 
+
 ## Join the EddieHub community
 
 Discord http://discord.eddiehub.org
