@@ -1,4 +1,10 @@
 import { redirect } from "next/navigation";
+import {
+  CurrencyDollarIcon,
+  MegaphoneIcon,
+  ScaleIcon,
+  SignalIcon,
+} from "@heroicons/react/24/outline";
 
 import prisma from "@/models/db";
 import Items from "@/components/list/Items";
@@ -86,6 +92,24 @@ export default async function Page({ params }) {
                       platform.price
                     })`,
                     description: platform.description,
+                    meta: [
+                      {
+                        icon: MegaphoneIcon,
+                        text: REACH().data[platform.reach].name,
+                      },
+                      {
+                        icon: ScaleIcon,
+                        text: REACH().data[platform.reach].group,
+                      },
+                      {
+                        icon: SignalIcon,
+                        text: PLATFORMS().data[platform.name].display,
+                      },
+                      {
+                        icon: CurrencyDollarIcon,
+                        text: platform.price,
+                      },
+                    ],
                   }))}
                 />
               </div>
@@ -97,10 +121,13 @@ export default async function Page({ params }) {
         <div className="grid grid-cols-1 gap-4">
           <section aria-labelledby="section-2-title">
             <h2 className="sr-only" id="section-2-title">
-              Section title
+              User details
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
-              <div className="p-6">{/* Your content */}</div>
+              <div className="p-6">{user.bio}</div>
+              <a href={user.website} className="p-6">
+                {user.website}
+              </a>
             </div>
           </section>
         </div>
