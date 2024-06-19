@@ -1,3 +1,12 @@
+## [0.7.2](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.7.1...v0.7.2) (2024-06-19)
+
+
+### Bug Fixes
+
+* homepage text ([7cebf7d](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/7cebf7d651399a01654a01a4f168b0419381bb67))
+
+
+
 ## [0.7.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.7.0...v0.7.1) (2024-06-19)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * my links list to show like public ([34efbd6](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/34efbd65bb4dfaac9e19468b089c84064592175c))
-
-
-
-## [0.4.3](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.4.2...v0.4.3) (2024-06-18)
-
-
-### Bug Fixes
-
-* git ignore .env file ([01edad5](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/01edad523cadea11f5a05bea06df29e3275e9c3b))
 
 
 
