@@ -12,6 +12,7 @@ export default function User(user) {
       .toLowerCase(),
     bio: z.string().max(1024),
     website: z.string().url().optional().or(z.literal("")),
+    tags: z.string().max(1024).optional(),
   });
 
   const validatedFields = schema.safeParse({

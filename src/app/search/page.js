@@ -59,6 +59,7 @@ export default async function Page() {
                         text: `From $${user.platforms[0].price}`,
                       },
                     ],
+                    tags: user.tags?.split(","),
                   }))}
                 />
               </div>
