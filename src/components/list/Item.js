@@ -1,21 +1,20 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
-
+import Image from "next/image";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 
 export default function Item({ data }) {
   return (
-    <li
-      key={data.id}
-      className="relative hover:bg-gray-50 gap-y-4 py-5 gap-x-6"
-    >
+    <li className="relative hover:bg-gray-50 gap-y-4 py-5 gap-x-6">
       <div className="flex flex-wrap items-center justify-between sm:flex-nowrap">
         <div className="flex min-w-0 gap-x-4">
           {data.image && (
-            <img
+            <Image
               className="h-12 w-12 flex-none rounded-full bg-gray-50"
               src={data.image}
               alt={data.description}
+              width={48}
+              height={48}
             />
           )}
           {data.icon && (

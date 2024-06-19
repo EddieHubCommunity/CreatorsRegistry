@@ -10,6 +10,7 @@ import prisma from "@/models/db";
 import Items from "@/components/list/Items";
 import REACH from "@/config/reach";
 import PLATFORMS from "@/config/platforms";
+import Image from "next/image";
 
 export default async function Page({ params }) {
   const user = await prisma.user.findUnique({
@@ -55,10 +56,12 @@ export default async function Page({ params }) {
                 <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
                   <div className="mx-auto flex max-w-2xl items-center justify-between gap-x-8 lg:mx-0 lg:max-w-none">
                     <div className="flex items-center gap-x-6">
-                      <img
+                      <Image
                         src={user.image}
-                        alt=""
+                        alt={user.name}
                         className="h-16 w-16 flex-none rounded-full ring-1 ring-gray-900/10"
+                        width={64}
+                        height={64}
                       />
                       <h1>
                         <div className="text-sm leading-6 text-gray-500">

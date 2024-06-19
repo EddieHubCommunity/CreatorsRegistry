@@ -69,8 +69,8 @@ export default function Alert({
           >
             {!!details && (
               <ul role="list" className="list-disc space-y-1 pl-5">
-                {details.map((item) => (
-                  <li>{item}</li>
+                {details.map((item, idx) => (
+                  <li key={idx}>{item}</li>
                 ))}
               </ul>
             )}

@@ -57,9 +57,9 @@ export default function Header({ session, user }) {
                   <Image
                     className="h-8 w-auto"
                     src="/logo.svg"
-                    width={100}
-                    height={100}
-                    alt="Content Cerators"
+                    width={32}
+                    height={32}
+                    alt="Content Creators"
                   />
                 </Link>
               </div>
@@ -83,10 +83,12 @@ export default function Header({ session, user }) {
                       <MenuButton className="relative flex rounded-full bg-white text-sm ring-2 ring-white ring-opacity-20 focus:outline-none focus:ring-opacity-100">
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">Open user menu</span>
-                        <img
+                        <Image
                           className="h-8 w-8 rounded-full"
                           src={profile.imageUrl}
                           alt=""
+                          width={32}
+                          height={32}
                         />
                       </MenuButton>
                     </div>
@@ -233,9 +235,9 @@ export default function Header({ session, user }) {
                           <Image
                             className="h-8 w-auto"
                             src="/logo.svg"
-                            width={80}
-                            height={80}
-                            alt="Content Cerators"
+                            width={32}
+                            height={32}
+                            alt="Content Creators"
                           />
                         </div>
                         <div className="-mr-2">
@@ -274,10 +276,12 @@ export default function Header({ session, user }) {
                       <div className="pb-2 pt-4">
                         <div className="flex items-center px-5">
                           <div className="flex-shrink-0">
-                            <img
+                            <Image
                               className="h-10 w-10 rounded-full"
                               src={profile.imageUrl}
-                              alt=""
+                              alt={profile.name}
+                              width={40}
+                              height={40}
                             />
                           </div>
                           <div className="ml-3 min-w-0 flex-1">
