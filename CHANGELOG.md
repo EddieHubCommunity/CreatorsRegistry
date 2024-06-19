@@ -1,3 +1,12 @@
+# [0.8.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.7.2...v0.8.0) (2024-06-19)
+
+
+### Features
+
+* user tags ([2a17e31](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/2a17e310b9c330ae89f051793e53469f74e727dd))
+
+
+
 ## [0.7.2](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.7.1...v0.7.2) (2024-06-19)
 
 
@@ -31,20 +40,6 @@
 ### Features
 
 * display highest reach + lowest cost ([76ab9f2](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/76ab9f2270c2dca50b861d8149b4a746e7667740))
-
-
-
-# [0.5.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.4.3...v0.5.0) (2024-06-18)
-
-
-### Bug Fixes
-
-* header navigation link to my public profile ([3348a9c](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/3348a9ca9331b15ae496e0af4ff12241a686384a))
-
-
-### Features
-
-* my links list to show like public ([34efbd6](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/34efbd65bb4dfaac9e19468b089c84064592175c))
 
 
 
