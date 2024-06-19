@@ -45,13 +45,11 @@ All contributions welcome, not just code.
 5. Seed the database by inserting example data with `npm run db:dev:seed` (if you need to reset the database, use `npm run db:dev:reset`).
 6. Start the local development server with `npm run dev`.
 
-### Run Postgres using docker 
+### Postgres using Docker Compose
 
-#### Requirement 
-- Must have docker installed 
-```bash
-docker-compose up -d
-``` 
+Note: you must have docker installed 
+
+Run the docker command `docker-compose up -d`
 
 ## Join the EddieHub community
 
