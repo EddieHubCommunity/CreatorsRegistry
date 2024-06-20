@@ -48,7 +48,7 @@ All contributions welcome, not just code.
 
 ### Postgres using Docker Compose
 
-- Note: you must have docker installed 
+ Note: you must have docker installed 
 
 Run the docker command `docker compose up -d`
 ## Join the EddieHub community
