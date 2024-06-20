@@ -51,5 +51,6 @@ All contributions welcome, not just code.
  Note: you must have docker installed 
 
 Run the docker command `docker compose up -d`
+
 ## Join the EddieHub community
 Discord http://discord.eddiehub.org
