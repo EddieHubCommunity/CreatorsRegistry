@@ -17,11 +17,11 @@ All contributions welcome, not just code.
 
 ### Local development
 
+This environment is fully on your computer and requires each dependency to be installed and set up, but it gives you the most flexibility for customisation.
+
 #### Prerequisites
 
 NodeJS, Postgres and LinkedIn OAuth
-
-This environment is fully on your computer and requires each dependency to be installed and set up, but it gives you the most flexibility for customisation.
 
 1. Copy `.env.example` to `.env` and fill out the parameters.
    - For LinkedIn parameters, create a developer app [here](https://developer.linkedin.com).
