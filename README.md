@@ -54,12 +54,12 @@ This will allow you to use your favorite IDE without having to install any depen
 
 #### Prerequisites
 
-Docker and Docker Compose Installed
+Docker and Docker Compose
 
 1. Clone the repository and navigate to the root of the directory.
-2. 1. Copy `.env.example` to `.env` and fill out the parameters. Please looks at [Environment Variables](#environment-variables) section.
+2. Copy `.env.example` to `.env` and fill out the parameters. Please refer to the [Environment Variables](#environment-variables) section.
    - For LinkedIn parameters, create a developer app [here](https://developer.linkedin.com).
-   - There is no need to chnage the postgres URL it's arelegy set in [compose.yaml](compose.yaml) file.
+   - There is no need to change the Postgres URL as it's already set in the [compose.yaml](compose.yaml) file.
 3. Run `docker compose up`.
 4. In your browser, go to `localhost:3000`, and you should see the project up and running.
 
