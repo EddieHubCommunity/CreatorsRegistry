@@ -4,21 +4,20 @@ services:
       context: .
     env_file:
       - .env
-    # Override the DB URL in the .env file
-    environment:
+    environment:  # To override the DB URL in the .env file
       - DATABASE_URL=postgres://postgres:password@db:5432/contentcreator?schema=public
     depends_on:
       - db
     ports:
       - 3000:3000
     networks: 
-      - content-registry
+      - creators-registry
 
   db:
     image: postgres:16
     container_name: db
     networks:
-      - content-registry
+      - creators-registry
     restart: always
     user: postgres
     volumes:
@@ -34,7 +33,7 @@ services:
       retries: 5
 
 networks:
-  content-registry:
+  creators-registry:
     driver: bridge
 
 volumes:

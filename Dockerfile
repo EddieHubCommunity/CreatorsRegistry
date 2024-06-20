@@ -11,4 +11,4 @@ RUN npm ci
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "cp .env.example .env && npm run db:prod:migrate && npm run build && npm run start"]
+CMD npm run db:prod:migrate && npm run build && npm run start
