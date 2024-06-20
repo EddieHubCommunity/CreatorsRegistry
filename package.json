@@ -1,6 +1,6 @@
 {
   "name": "content-creators",
-  "version": "0.7.0",
+  "version": "0.8.1",
   "private": false,
   "scripts": {
     "dev": "next dev",
@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "db:prod:migrate": "prisma migrate deploy",
+    "db:dev:push": "prisma db push",
     "db:dev:migrate": "prisma migrate dev",
     "db:dev:seed": "prisma db seed",
     "db:dev:reset": "prisma migrate reset"

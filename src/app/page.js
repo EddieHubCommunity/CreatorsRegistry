@@ -34,7 +34,7 @@ const featuresCampaigns = [
   {
     name: "Make your time and budget go further",
     description:
-      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+      "No need to search individual social platforms for people who maybe want to collab, you have them directly right here.",
     icon: FingerPrintIcon,
   },
 ];

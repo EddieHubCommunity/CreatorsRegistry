@@ -10,11 +10,12 @@ const {
   randUrl,
   randTextRange,
   rand,
+  randGitBranch,
 } = require("@ngneat/falso");
 
 const config = require("../src/config/app.json");
 
-const emails = [1, 2, 3, 4, 5, 6].map((no) => `test${no}@test.com`);
+const emails = [1, 2, 3, 4, 5, 6, 7, 8, 9].map((no) => `test${no}@test.com`);
 
 async function main() {
   emails.map(async (email) => {
@@ -24,6 +25,7 @@ async function main() {
       name: randFullName(),
       image: `${randAvatar()}?${Math.random()}}`,
       website: randUrl(),
+      tags: randGitBranch({ length: Math.ceil(Math.random() * 6) }).join(", "),
       bio: randTextRange({ min: 10, max: 250 }),
       platforms: {
         createMany: {

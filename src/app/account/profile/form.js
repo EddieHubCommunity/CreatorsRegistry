@@ -52,6 +52,8 @@ export default function Form({ user }) {
               value={user.website}
             />
 
+            <Input name="tags" error={state?.errors?.tags} value={user.tags} />
+
             <Textarea
               name="bio"
               error={state?.errors?.bio}
