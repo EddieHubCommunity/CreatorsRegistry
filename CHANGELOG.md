@@ -1,3 +1,12 @@
+# [0.10.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.9.0...v0.10.0) (2024-06-20)
+
+
+### Features
+
+* docker and compose support ([#55](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/55)) ([6ec6312](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/6ec6312eccbfa82d1c8ea18f0482c5eb1d109bc7))
+
+
+
 # [0.9.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.8.1...v0.9.0) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * homepage text ([7cebf7d](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/7cebf7d651399a01654a01a4f168b0419381bb67))
-
-
-
-## [0.7.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.7.0...v0.7.1) (2024-06-19)
-
-
-### Bug Fixes
-
-* image tags and keys ([4efc175](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/4efc175425c0c8ddc139487158b84ee5faefc648))
 
 
 
