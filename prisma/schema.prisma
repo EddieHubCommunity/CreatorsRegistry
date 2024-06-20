@@ -28,6 +28,7 @@ model User {
   username     String           @unique
   bio          String?
   website      String?
+  tags         String?
   platforms    Platform[]
 
   createdAt DateTime @default(now())
