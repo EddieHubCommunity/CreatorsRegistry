@@ -15,13 +15,11 @@ All contributions welcome, not just code.
 - Postgres
 - LinkedIn OAuth
 
-### Requirements
-
-- NodeJS
-- Postgres
-- LinkedIn OAuth
-
 ### Local development
+
+#### Prerequisites
+
+NodeJS, Postgres and LinkedIn OAuth
 
 This environment is fully on your computer and requires each dependency to be installed and set up, but it gives you the most flexibility for customisation.
 
@@ -54,9 +52,14 @@ This environment is fully on your computer and requires each dependency to be in
 
 This will allow you to use your favorite IDE without having to install any dependencies on your computer.
 
+#### Prerequisites
+
+Docker and Docker Compose Installed
+
 1. Clone the repository and navigate to the root of the directory.
-2. 1. Copy `.env.example` to `.env` and fill out the parameters.
+2. 1. Copy `.env.example` to `.env` and fill out the parameters. Please looks at [Environment Variables](#environment-variables) section.
    - For LinkedIn parameters, create a developer app [here](https://developer.linkedin.com).
+   - There is no need to chnage the postgres URL it's arelegy set in [compose.yaml](compose.yaml) file.
 3. Run `docker compose up`.
 4. In your browser, go to `localhost:3000`, and you should see the project up and running.
 
