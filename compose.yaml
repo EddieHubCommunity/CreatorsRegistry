@@ -1,16 +1,40 @@
-version: '3.9'
-
 services:
-
-  db:
-    image: postgres
-    container_name: creator_registry_db
-    restart: always
-    shm_size: 128mb
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: contentcreator
+  server:
+    build:
+      context: .
+    env_file:
+      - .env
+    environment:  # To override the DB URL in the .env file
+      - DATABASE_URL=postgres://postgres:password@db:5432/contentcreator?schema=public
+    depends_on:
+      - db
     ports:
-      - "5432:5432"
+      - 3000:3000
+    networks: 
+      - creators-registry
+    container_name: server
+  db:
+    image: postgres:16
+    container_name: db
+    networks:
+      - creators-registry
+    restart: always
+    user: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=password
+    expose:
+      - 5432
+    healthcheck:
+      test: [ "CMD", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
+networks:
+  creators-registry:
+    driver: bridge
+
+volumes:
+  db-data:

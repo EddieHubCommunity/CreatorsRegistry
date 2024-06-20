@@ -15,16 +15,18 @@ All contributions welcome, not just code.
 - Postgres
 - LinkedIn OAuth
 
-### Requirements
-
-- NodeJS
-- Postgres
-- LinkedIn OAuth
-
 ### Local development
+
+This environment is fully on your computer and requires each dependency to be installed and set up, but it gives you the most flexibility for customisation.
+
+#### Prerequisites
+
+NodeJS, Postgres and LinkedIn OAuth
 
 1. Copy `.env.example` to `.env` and fill out the parameters.
    - For LinkedIn parameters, create a developer app [here](https://developer.linkedin.com).
+  
+#### Environment Variables
 
 | ENVIRONMENT VARIABLE   | EXAMPLE VALUE                                                          | DESCRIPTION                                 |
 | :--------------------- | :--------------------------------------------------------------------- | :------------------------------------------ |
@@ -40,17 +42,26 @@ All contributions welcome, not just code.
     <img alt="LinkedIn OAuth screenshot of settings" src="https://github.com/EddieHubCommunity/CreatorsRegistry/assets/624760/c61a50eb-363e-4dcb-b208-405e256f7238">
 </details>
 
-2. Install the dependencies using `npm ci` from the package lock file (do not use `npm install` unless for a specific reason).
-3. Ensure your Postgres server is running on `localhost:5432` with the default username and `POSTGRES_PASSWORD` set as `password`.
-4. Create the database tables by running `npm run db:dev:migrate` (for production, use `npm run db:prod:migrate`).
-5. Seed the database by inserting example data with `npm run db:dev:seed` (if you need to reset the database, use `npm run db:dev:reset`).
-6. Start the local development server with `npm run dev`.
+1. Install the dependencies using `npm ci` from the package lock file (do not use `npm install` unless for a specific reason).
+2. Ensure your Postgres server is running on `localhost:5432` with the default username and `POSTGRES_PASSWORD` set as `password`. To start a Postgres server using Docker and Compose, use `docker compose -f postgres.compose.yaml up`.
+3. Create the database tables by running `npm run db:dev:migrate` (for production, use `npm run db:prod:migrate`).
+4. Seed the database by inserting example data with `npm run db:dev:seed` (if you need to reset the database, use `npm run db:dev:reset`).
+5. Start the local development server with `npm run dev`.
 
-### Postgres using Docker Compose
+### Local Development with Docker Compose
 
- Note: you must have docker installed 
+This will allow you to use your favorite IDE without having to install any dependencies on your computer.
 
-Run the docker command `docker compose up -d`
+#### Prerequisites
+
+Docker and Docker Compose
+
+1. Clone the repository and navigate to the root of the directory.
+2. Copy `.env.example` to `.env` and fill out the parameters. Please refer to the [Environment Variables](#environment-variables) section.
+   - For LinkedIn parameters, create a developer app [here](https://developer.linkedin.com).
+   - There is no need to change the Postgres URL as it's already set in the [compose.yaml](compose.yaml) file.
+3. Run `docker compose up`.
+4. In your browser, go to `localhost:3000`, and you should see the project up and running.
 
 ## Join the EddieHub community
 Discord http://discord.eddiehub.org
