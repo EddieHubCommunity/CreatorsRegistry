@@ -55,8 +55,10 @@ This environment is fully on your computer and requires each dependency to be in
 This will allow you to use your favorite IDE without having to install any dependencies on your computer.
 
 1. Clone the repository and navigate to the root of the directory.
-2. Run `docker compose up`.
-3. In your browser, go to `localhost:3000`, and you should see the project up and running.
+2. 1. Copy `.env.example` to `.env` and fill out the parameters.
+   - For LinkedIn parameters, create a developer app [here](https://developer.linkedin.com).
+3. Run `docker compose up`.
+4. In your browser, go to `localhost:3000`, and you should see the project up and running.
 
 ## Join the EddieHub community
 Discord http://discord.eddiehub.org
