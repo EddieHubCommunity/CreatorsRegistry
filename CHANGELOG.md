@@ -1,3 +1,12 @@
+# [0.9.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.8.1...v0.9.0) (2024-06-20)
+
+
+### Features
+
+* added docker-compose for running postgres ([#39](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/39)) ([70d4d65](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/70d4d652879235461e8a44aa5d0c67131d93e8af))
+
+
+
 ## [0.8.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.8.0...v0.8.1) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * image tags and keys ([4efc175](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/4efc175425c0c8ddc139487158b84ee5faefc648))
-
-
-
-# [0.7.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.6.0...v0.7.0) (2024-06-18)
-
-
-### Features
-
-* homepage features + lastest profiles ([c803561](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/c803561bbcf07eecb6b5e0a27acc018ef609ad15))
 
 
 
