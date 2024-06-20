@@ -12,7 +12,7 @@ services:
       - 3000:3000
     networks: 
       - creators-registry
-
+    container_name: server
   db:
     image: postgres:16
     container_name: db
