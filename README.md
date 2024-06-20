@@ -41,12 +41,12 @@ All contributions welcome, not just code.
 </details>
 
 2. Install the dependencies using `npm ci` from the package lock file (do not use `npm install` unless for a specific reason).
-3. Ensure your Postgres server is running on `localhost:5432` with the default username and `POSTGRES_PASSWORD` set as `password`.
+3. Ensure your Postgres server is running on `localhost:5432` with the default username and `POSTGRES_PASSWORD` set as `password`. To start a postgress server using Docker and compose 
 4. Create the database tables by running `npm run db:dev:migrate` (for production, use `npm run db:prod:migrate`).
 5. Seed the database by inserting example data with `npm run db:dev:seed` (if you need to reset the database, use `npm run db:dev:reset`).
 6. Start the local development server with `npm run dev`.
 
-### Postgres using Docker Compose
+Postgres using Docker Compose
 
  Note: you must have docker installed 
 
