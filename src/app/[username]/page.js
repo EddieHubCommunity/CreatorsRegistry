@@ -25,6 +25,14 @@ export default async function Page({ params }) {
     redirect("/");
   }
 
+  // increment profile views
+  await prisma.user.update({
+    where: { username: params.username },
+    data: {
+      views: { increment: 1 },
+    },
+  });
+
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <h1 className="sr-only">My Profile</h1>

@@ -29,6 +29,7 @@ model User {
   bio          String?
   website      String?
   tags         String?
+  views        Int?             @default(0)
   platforms    Platform[]
 
   createdAt DateTime @default(now())
