@@ -11,7 +11,8 @@
     "db:dev:push": "prisma db push",
     "db:dev:migrate": "prisma migrate dev",
     "db:dev:seed": "prisma db seed",
-    "db:dev:reset": "prisma migrate reset"
+    "db:dev:reset": "prisma migrate reset",
+    "prepare": "husky"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
