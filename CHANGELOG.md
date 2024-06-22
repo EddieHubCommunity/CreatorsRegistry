@@ -1,3 +1,12 @@
+# [0.14.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.13.0...v0.14.0) (2024-06-22)
+
+
+### Features
+
+* cta on homepage ([abf32fc](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/abf32fc9184915644af302a1960749b50c02a619))
+
+
+
 # [0.13.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.12.0...v0.13.0) (2024-06-22)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * docker and compose support ([#55](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/55)) ([6ec6312](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/6ec6312eccbfa82d1c8ea18f0482c5eb1d109bc7))
-
-
-
-# [0.9.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.8.1...v0.9.0) (2024-06-20)
-
-
-### Features
-
-* added docker-compose for running postgres ([#39](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/39)) ([70d4d65](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/70d4d652879235461e8a44aa5d0c67131d93e8af))
 
 
 
