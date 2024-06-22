@@ -4,13 +4,13 @@ services:
       context: .
     env_file:
       - .env
-    environment:  # To override the DB URL in the .env file
+    environment: # To override the DB URL in the .env file
       - DATABASE_URL=postgres://postgres:password@db:5432/contentcreator?schema=public
     depends_on:
       - db
     ports:
       - 3000:3000
-    networks: 
+    networks:
       - creators-registry
     container_name: server
   db:
@@ -27,7 +27,7 @@ services:
     expose:
       - 5432
     healthcheck:
-      test: [ "CMD", "pg_isready" ]
+      test: ["CMD", "pg_isready"]
       interval: 10s
       timeout: 5s
       retries: 5
