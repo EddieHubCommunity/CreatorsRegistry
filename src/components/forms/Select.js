@@ -1,11 +1,6 @@
-import { useFormStatus } from "react-dom";
 import { ExclamationCircleIcon } from "@heroicons/react/20/solid";
 
-import { classNames } from "@/utils/classNames";
-
 export default function Select({ name, options = [], value, error }) {
-  const { pending } = useFormStatus();
-
   return (
     <div className="col-span-full">
       <label
@@ -21,10 +16,13 @@ export default function Select({ name, options = [], value, error }) {
           defaultValue={value}
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
         >
+          <option value="" defaultValue={value === ""}>
+            -- Please Select --
+          </option>
           {options.map((option) => (
             <option
               value={option.value}
-              selected={option.value === value}
+              defaultValue={option.value === value}
               key={option.value}
             >
               {option.display}

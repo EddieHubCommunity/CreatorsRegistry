@@ -3,9 +3,10 @@ import prisma from "@/models/db";
 
 import Items from "@/components/list/Items";
 import REACH from "@/config/reach";
+import Form from "./form";
 
-export default async function Page() {
-  const users = await prisma.user.findMany({
+export default async function Page({ searchParams }) {
+  const query = {
     include: {
       platforms: {
         orderBy: {
@@ -18,10 +19,30 @@ export default async function Page() {
         some: {},
       },
     },
-    orderBy: [{ createdAt: "desc" }],
+    orderBy: [
+      {
+        [searchParams.sort ? searchParams.sort : "createdAt"]:
+          searchParams.sortDirection ? searchParams.sortDirection : "desc",
+      },
+    ],
     skip: 0,
     take: 10,
-  });
+  };
+
+  if (searchParams) {
+    if (searchParams.platform !== "") {
+      query.where.platforms.some["name"] = {
+        contains: searchParams.platform,
+      };
+    }
+    if (searchParams.reach !== "") {
+      query.where.platforms.some["reach"] = {
+        contains: searchParams.reach,
+      };
+    }
+  }
+
+  const users = await prisma.user.findMany(query);
 
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -77,7 +98,9 @@ export default async function Page() {
               Section title
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
-              <div className="p-6">{/* Your content */}</div>
+              <div className="p-6">
+                <Form searchParams={searchParams} />
+              </div>
             </div>
           </section>
         </div>
