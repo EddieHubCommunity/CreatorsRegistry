@@ -1,3 +1,12 @@
+# [0.13.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.12.0...v0.13.0) (2024-06-22)
+
+
+### Features
+
+* husky npm lint command to commit hook ([#59](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/59)) ([e72a0de](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/e72a0deee3bc127519ab08b017bd0e89175659c1))
+
+
+
 # [0.12.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.11.0...v0.12.0) (2024-06-22)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * added docker-compose for running postgres ([#39](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/39)) ([70d4d65](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/70d4d652879235461e8a44aa5d0c67131d93e8af))
-
-
-
-## [0.8.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.8.0...v0.8.1) (2024-06-20)
-
-
-### Bug Fixes
-
-* search default list ([880f1b8](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/880f1b861df21108e7f80f5b009b6a9b6b816791))
 
 
 
