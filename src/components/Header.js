@@ -121,7 +121,7 @@ export default function Header({ session, user }) {
               </div>
 
               {/* Search */}
-              <div className="min-w-0 flex-1 px-12 lg:hidden">
+              {/* <div className="min-w-0 flex-1 px-12 lg:hidden">
                 <div className="mx-auto w-full max-w-xs">
                   <label htmlFor="desktop-search" className="sr-only">
                     Search
@@ -142,7 +142,7 @@ export default function Header({ session, user }) {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Menu button */}
               <div className="absolute right-0 flex-shrink-0 lg:hidden">
@@ -177,7 +177,7 @@ export default function Header({ session, user }) {
                     ))}
                   </nav>
                 </div>
-                <div>
+                {/* <div>
                   <div className="mx-auto w-full max-w-md">
                     <label htmlFor="mobile-search" className="sr-only">
                       Search
@@ -198,7 +198,7 @@ export default function Header({ session, user }) {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
