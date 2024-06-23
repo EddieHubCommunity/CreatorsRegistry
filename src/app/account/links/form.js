@@ -30,7 +30,7 @@ export default function Form({ data }) {
 
   return (
     <form action={formAction}>
-      {id && <Input type="hidden" name="id" value={id} />}
+      {id && <Input type="hidden" id="id" value={id} />}
       {state.success && <Alert type="success" message="Saved" />}
       {state.errors && (
         <Alert
@@ -53,35 +53,45 @@ export default function Form({ data }) {
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <Select
-              name="name"
+              id="name"
+              name="Name"
               error={state?.errors?.name}
               options={PLATFORMS().select}
               value={edit.name}
             />
 
             <Select
-              name="reach"
+              id="reach"
+              name="Your Reach"
               error={state?.errors?.reach}
               options={REACH().select}
               value={edit.reach}
             />
 
             <Input
-              name="price"
+              id="price"
+              name="Price (what do you charge)"
               error={state?.errors?.price}
               value={edit.price}
             />
 
-            <Input name="url" error={state?.errors?.url} value={edit.url} />
+            <Input
+              id="url"
+              name="URL"
+              error={state?.errors?.url}
+              value={edit.url}
+            />
 
             <Input
-              name="example"
+              id="example"
+              name="Example content URL"
               error={state?.errors?.example}
               value={edit.example}
             />
 
             <Textarea
-              name="description"
+              id="description"
+              name="Description of service"
               description="Describe the type of content you create on this platform."
               error={state?.errors?.description}
               value={edit.description}

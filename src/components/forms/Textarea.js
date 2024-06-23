@@ -3,6 +3,7 @@ import { useFormStatus } from "react-dom";
 import { classNames } from "@/utils/classNames";
 
 export default function Textarea({
+  id,
   name,
   value,
   description,
@@ -10,18 +11,22 @@ export default function Textarea({
   rows = 3,
 }) {
   const { pending } = useFormStatus();
+
+  if (!name) {
+    name = id;
+  }
   return (
     <div className="col-span-full">
       <label
-        htmlFor={name}
+        htmlFor={id}
         className="block text-sm font-medium leading-6 text-gray-900"
       >
         {name}
       </label>
       <div className="mt-2">
         <textarea
-          name={name}
-          id={name}
+          name={id}
+          id={id}
           disabled={pending}
           rows={rows}
           className={classNames(
@@ -31,7 +36,7 @@ export default function Textarea({
               : "ring-gray-300 focus-within:ring-indigo-600",
             pending && "bg-gray-300"
           )}
-          aria-describedby={`${name}-error`}
+          aria-describedby={`${id}-error`}
           defaultValue={value}
         />
       </div>
@@ -39,7 +44,7 @@ export default function Textarea({
         <p className="mt-3 text-sm leading-6 text-gray-600">{description}</p>
       )}
       {error && (
-        <p className="mt-2 text-sm text-red-600" id={`${name}-error`}>
+        <p className="mt-2 text-sm text-red-600" id={`${id}-error`}>
           {error}
         </p>
       )}

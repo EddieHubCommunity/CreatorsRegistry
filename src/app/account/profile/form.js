@@ -40,22 +40,30 @@ export default function Form({ user }) {
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <Input
-              name="username"
+              id="username"
+              name="Your uniqu username"
               prepend="creators-registry.eddiehub.org/"
               error={state?.errors?.username}
               value={user.username}
             />
 
             <Input
-              name="website"
+              id="website"
+              name="Your website"
               error={state?.errors?.website}
               value={user.website}
             />
 
-            <Input name="tags" error={state?.errors?.tags} value={user.tags} />
+            <Input
+              id="tags"
+              name="Tag topics"
+              error={state?.errors?.tags}
+              value={user.tags}
+            />
 
             <Textarea
-              name="bio"
+              id="bio"
+              name="Your Bio"
               error={state?.errors?.bio}
               value={user.bio}
               description="Write a few sentences about yourself."

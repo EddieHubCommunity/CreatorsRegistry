@@ -20,7 +20,8 @@ export default function Form({ searchParams }) {
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <Select
-              name="sort"
+              id="sort"
+              name="Sort"
               value={searchParams.sort}
               options={[
                 {
@@ -35,7 +36,8 @@ export default function Form({ searchParams }) {
             />
 
             <Select
-              name="sortDirection"
+              id="sortDirection"
+              name="Sort Direction"
               value={searchParams.sortDirection}
               options={[
                 {
@@ -50,12 +52,14 @@ export default function Form({ searchParams }) {
             />
 
             <Select
-              name="platform"
+              id="platform"
+              name="Platform"
               value={searchParams.platform}
               options={PLATFORMS().select}
             />
             <Select
-              name="reach"
+              id="reach"
+              name="Reach"
               value={searchParams.reach}
               options={REACH().select}
             />
