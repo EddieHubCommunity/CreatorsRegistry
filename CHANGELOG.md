@@ -1,3 +1,12 @@
+## [0.16.5](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.4...v0.16.5) (2024-06-23)
+
+
+### Bug Fixes
+
+* price text to be specifc ([592dcac](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/592dcac6d0beb26c22b9046993591ab0c8e326d9))
+
+
+
 ## [0.16.4](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.3...v0.16.4) (2024-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * platform twitch added ([1a82dca](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/1a82dca386b723bf972047e93a968ced26822f61))
-
-
-
-# [0.16.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.15.1...v0.16.0) (2024-06-23)
-
-
-### Features
-
-* deploy to eddiehub cloud caprover ([526fa9b](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/526fa9b50ac8c131fae187f960c3f775eefc3679))
 
 
 
