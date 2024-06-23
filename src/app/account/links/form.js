@@ -70,7 +70,7 @@ export default function Form({ data }) {
 
             <Input
               id="price"
-              name="Price (what do you charge)"
+              name="Price $ (what do you charge in USD)"
               error={state?.errors?.price}
               value={edit.price}
             />
