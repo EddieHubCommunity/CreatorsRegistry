@@ -1,3 +1,12 @@
+## [0.16.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.0...v0.16.1) (2024-06-23)
+
+
+### Bug Fixes
+
+* platform twitch added ([1a82dca](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/1a82dca386b723bf972047e93a968ced26822f61))
+
+
+
 # [0.16.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.15.1...v0.16.0) (2024-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * platform url goes to example content ([28dc3a8](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/28dc3a842c23d560eb146afdac53adf115385a93))
-
-
-
-# [0.14.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.13.0...v0.14.0) (2024-06-22)
-
-
-### Features
-
-* cta on homepage ([abf32fc](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/abf32fc9184915644af302a1960749b50c02a619))
 
 
 
