@@ -1,3 +1,12 @@
+## [0.14.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.14.0...v0.14.1) (2024-06-23)
+
+
+### Bug Fixes
+
+* platform url goes to example content ([28dc3a8](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/28dc3a842c23d560eb146afdac53adf115385a93))
+
+
+
 # [0.14.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.13.0...v0.14.0) (2024-06-22)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * profile views incrementer ([022d8eb](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/022d8eba202a718cbc53e2b119d651637e79179e))
-
-
-
-# [0.10.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.9.0...v0.10.0) (2024-06-20)
-
-
-### Features
-
-* docker and compose support ([#55](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/55)) ([6ec6312](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/6ec6312eccbfa82d1c8ea18f0482c5eb1d109bc7))
 
 
 
