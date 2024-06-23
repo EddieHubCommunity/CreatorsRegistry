@@ -1,6 +1,6 @@
 import { ExclamationCircleIcon } from "@heroicons/react/20/solid";
 
-export default function Select({ name, options = [], value, error }) {
+export default function Select({ name, options = [], value = "", error }) {
   return (
     <div className="col-span-full">
       <label
@@ -24,6 +24,7 @@ export default function Select({ name, options = [], value, error }) {
               value={option.value}
               defaultValue={option.value === value}
               key={option.value}
+              selected={option.value === value}
             >
               {option.display}
             </option>

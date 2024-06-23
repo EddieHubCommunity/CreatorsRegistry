@@ -97,7 +97,7 @@ export default async function Page({ params }) {
                   data={user.platforms.map((platform) => ({
                     id: platform.id,
                     icon: platform.name,
-                    url: platform.url,
+                    url: platform.example,
                     urlText: `${REACH().data[platform.reach].name} on ${
                       PLATFORMS().data[platform.name].display
                     } with ${REACH().data[platform.reach].group} (from $${
