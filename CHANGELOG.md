@@ -1,3 +1,12 @@
+## [0.16.3](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.2...v0.16.3) (2024-06-23)
+
+
+### Bug Fixes
+
+* when no tags on profile ([387432e](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/387432e473f26ec493d7c5db6490097b404fa3cc))
+
+
+
 ## [0.16.2](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.1...v0.16.2) (2024-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * docker container registry push ([67e320a](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/67e320a3c680d5d5a47824ccfa8d8d3ebc353203))
-
-
-
-# [0.15.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.14.1...v0.15.0) (2024-06-23)
-
-
-### Features
-
-* github docker container registry ([5cc439e](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/5cc439ece275515a928b31f8274d13f126df1522))
 
 
 
