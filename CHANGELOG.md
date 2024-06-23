@@ -1,3 +1,12 @@
+## [0.15.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.15.0...v0.15.1) (2024-06-23)
+
+
+### Bug Fixes
+
+* docker container registry push ([67e320a](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/67e320a3c680d5d5a47824ccfa8d8d3ebc353203))
+
+
+
 # [0.15.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.14.1...v0.15.0) (2024-06-23)
 
 
@@ -31,20 +40,6 @@
 ### Features
 
 * husky npm lint command to commit hook ([#59](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/59)) ([e72a0de](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/e72a0deee3bc127519ab08b017bd0e89175659c1))
-
-
-
-# [0.12.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.11.0...v0.12.0) (2024-06-22)
-
-
-### Bug Fixes
-
-* docker compose formatting ([a78135a](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/a78135a7bf128f99ef4dcbcf59900541616cc3ee))
-
-
-### Features
-
-* search users ([f2b05ba](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/f2b05ba4546a9334ab081f83e157a5696fecf327))
 
 
 
