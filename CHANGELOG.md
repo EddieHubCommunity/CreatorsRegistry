@@ -1,3 +1,12 @@
+## [0.16.4](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.3...v0.16.4) (2024-06-23)
+
+
+### Bug Fixes
+
+* form field id separate to name ([08c87d1](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/08c87d14a56e4f0f633e4669642a2c2aa21a86c2))
+
+
+
 ## [0.16.3](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.2...v0.16.3) (2024-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * deploy to eddiehub cloud caprover ([526fa9b](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/526fa9b50ac8c131fae187f960c3f775eefc3679))
-
-
-
-## [0.15.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.15.0...v0.15.1) (2024-06-23)
-
-
-### Bug Fixes
-
-* docker container registry push ([67e320a](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/67e320a3c680d5d5a47824ccfa8d8d3ebc353203))
 
 
 
