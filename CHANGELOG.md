@@ -1,3 +1,12 @@
+## [0.16.2](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.1...v0.16.2) (2024-06-23)
+
+
+### Bug Fixes
+
+* caprover definition ([f3dc6c1](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/f3dc6c10565a0d0bc437a32bf958442ddbfbff39))
+
+
+
 ## [0.16.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.0...v0.16.1) (2024-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * github docker container registry ([5cc439e](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/5cc439ece275515a928b31f8274d13f126df1522))
-
-
-
-## [0.14.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.14.0...v0.14.1) (2024-06-23)
-
-
-### Bug Fixes
-
-* platform url goes to example content ([28dc3a8](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/28dc3a842c23d560eb146afdac53adf115385a93))
 
 
 
