@@ -12,6 +12,10 @@
     "linkedin": {
       "value": "linkedin",
       "display": "LinkedIn"
+    },
+    "twitch": {
+      "value": "twitch",
+      "display": "Twitch"
     }
   },
   "reach": {
