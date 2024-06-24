@@ -15,6 +15,9 @@ export default async function Page() {
 
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
+    include: {
+      platforms: true,
+    },
   });
 
   return (
@@ -49,7 +52,23 @@ export default async function Page() {
               Section title
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
-              <div className="p-6">{/* Your content */}</div>
+              <div className="p-6">
+                {user.platforms?.length ? (
+                  <Alert
+                    type="info"
+                    message={`You have ${
+                      user.platforms.length
+                    } links/platforms: ${user.platforms
+                      .map((platform) => platform.name)
+                      .join(", ")}`}
+                  />
+                ) : (
+                  <Alert
+                    type="warning"
+                    message={`You have NO links/platforms, you need at least 1 for your profile to appear in public`}
+                  />
+                )}
+              </div>
             </div>
           </section>
         </div>
