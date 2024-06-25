@@ -14,13 +14,13 @@ body:
   - type: input
     attributes:
       label: Where did you find this bug?
-      description: Local dev environment or production on biodrop.io
+      description: Local dev environment or production on creators-registry.eddiehubcommunity.org
     validations:
       required: true
   - type: input
     attributes:
-      label: Version of BioDrop (for example "v1.2.3")
-      description: Can be found in the footer of the BioDrop.io website.
+      label: Version of CreatorsRegistry (for example "v0.19.0")
+      description: Can be found in the footer of the creators-registry.eddiehubcommunity.org website.
     validations:
       required: true
   - type: textarea
@@ -34,8 +34,8 @@ body:
     id: steps
     attributes:
       label: Steps to Reproduce
-      description:  To help us recreate the bug, provide a numbered list of the exact steps taken to trigger the buggy behavior.
-      value:  | 
+      description: To help us recreate the bug, provide a numbered list of the exact steps taken to trigger the buggy behavior.
+      value: |
         If you know the steps, follow the below format and provide steps to reproduce
 
         For example:
