@@ -1,3 +1,12 @@
+# [0.19.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.18.0...v0.19.0) (2024-06-25)
+
+
+### Features
+
+* platform to have custom title ([dedcbe9](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/dedcbe97fc0215feb4906bf92dcea1b15a47cefc))
+
+
+
 # [0.18.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.17.3...v0.18.0) (2024-06-25)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * typo in settings form ([fb07638](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/fb07638915fa23e6c3adbfaa52238b447dee3d25))
-
-
-
-# [0.17.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.5...v0.17.0) (2024-06-24)
-
-
-### Features
-
-* extra info on settings page ([9bf92aa](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/9bf92aa57b446ead54a97d49d64a108e38e24a6d))
 
 
 
