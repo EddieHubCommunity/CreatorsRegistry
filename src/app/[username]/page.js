@@ -100,7 +100,7 @@ export default async function Page({ params }) {
                     url: platform.example,
                     urlText: `${REACH().data[platform.reach].name} on ${
                       PLATFORMS().data[platform.name].display
-                    } with ${REACH().data[platform.reach].group} (from $${
+                    } with ${REACH().data[platform.reach].group} ($${
                       platform.price
                     })`,
                     description: platform.description,
