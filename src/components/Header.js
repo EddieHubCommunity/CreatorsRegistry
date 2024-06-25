@@ -38,7 +38,7 @@ export default function Header({ session, user }) {
   if (user) {
     userNavigationAuth = [
       { name: "Your Profile", href: `/${user.username}` },
-      { name: "Your Links", href: "/account/links" },
+      { name: "Your Platforms", href: "/account/platforms" },
       { name: "Settings", href: "/account/profile" },
       { name: "Sign Out", href: "#", onClick: async () => await signOut() },
     ];

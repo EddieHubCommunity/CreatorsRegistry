@@ -63,7 +63,7 @@ export async function platformUpdate(prevState, formData) {
     });
   }
 
-  revalidatePath("/account/links");
+  revalidatePath("/account/platforms");
   return validate;
 }
 
@@ -95,6 +95,6 @@ export async function platformDelete(formData) {
     },
   });
 
-  revalidatePath("/account/links");
-  redirect("/account/links");
+  revalidatePath("/account/platforms");
+  redirect("/account/platforms");
 }
