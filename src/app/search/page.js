@@ -4,6 +4,7 @@ import prisma from "@/models/db";
 import Items from "@/components/list/Items";
 import REACH from "@/config/reach";
 import Form from "./form";
+import Alert from "@/components/Alert";
 
 export default async function Page({ searchParams }) {
   const query = {
@@ -57,35 +58,46 @@ export default async function Page({ searchParams }) {
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
               <div className="p-6">
-                <Items
-                  data={users.map((user) => ({
-                    id: user.username,
-                    image: user.image,
-                    url: `/${user.username}`,
-                    urlText: user.name,
-                    description: user.bio,
-                    socials: user.platforms.map((platform) => ({
-                      icon: platform.name,
-                    })),
-                    meta: [
-                      // biggest reach
-                      {
-                        icon: WifiIcon,
-                        text: `Reach ${
-                          REACH().data[
-                            REACH().sortByLargest(user.platforms)[0].reach
-                          ].group
-                        }`,
-                      },
-                      // lowest price
-                      {
-                        icon: ArrowUpIcon,
-                        text: `From $${user.platforms[0].price}`,
-                      },
-                    ],
-                    tags: user.tags?.split(","),
-                  }))}
-                />
+                {users.length > 0 ? (
+                  <Items
+                    data={users.map((user) => ({
+                      id: user.username,
+                      image: user.image,
+                      url: `/${user.username}`,
+                      urlText: user.name,
+                      description: user.bio,
+                      socials: user.platforms.map((platform) => ({
+                        icon: platform.name,
+                      })),
+                      meta: [
+                        // biggest reach
+                        {
+                          icon: WifiIcon,
+                          text: `Reach ${
+                            REACH().data[
+                              REACH().sortByLargest(user.platforms)[0].reach
+                            ].group
+                          }`,
+                        },
+                        // lowest price
+                        {
+                          icon: ArrowUpIcon,
+                          text: `From $${user.platforms[0].price}`,
+                        },
+                      ],
+                      tags: user.tags?.split(","),
+                    }))}
+                  />
+                ) : (
+                  <Alert
+                    type="info"
+                    message="No results found"
+                    details={[
+                      "Try adjusting your search parameters.",
+                      "Check for typos or broaden your search criteria.",
+                    ]}
+                  />
+                )}
               </div>
             </div>
           </section>
