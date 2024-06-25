@@ -41,7 +41,7 @@ export default function Form({ user }) {
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <Input
               id="username"
-              name="Your uniqu username"
+              name="Your unique username"
               prepend="creators-registry.eddiehub.org/"
               error={state?.errors?.username}
               value={user.username}
