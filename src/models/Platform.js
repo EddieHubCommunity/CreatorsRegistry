@@ -10,6 +10,7 @@ export default function Platform(platform) {
     price: z.number().min(10),
     url: z.string().url(),
     example: z.string().url(),
+    title: z.string().max(256),
     description: z.string().max(1024),
   });
 
@@ -19,6 +20,7 @@ export default function Platform(platform) {
     price: platform.price,
     url: platform.url,
     example: platform.example,
+    title: platform.title,
     description: platform.description,
   });
 

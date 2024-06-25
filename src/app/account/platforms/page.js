@@ -50,11 +50,7 @@ export default async function Page() {
                     id: platform.id,
                     icon: platform.name,
                     url: `?id=${platform.id}`,
-                    urlText: `${REACH().data[platform.reach].name} on ${
-                      PLATFORMS().data[platform.name].display
-                    } with ${REACH().data[platform.reach].group} ($${
-                      platform.price
-                    })`,
+                    urlText: platform.title ? platform.title : platform.name,
                     description: platform.description,
                     meta: [
                       {

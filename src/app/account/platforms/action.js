@@ -15,6 +15,7 @@ export async function platformUpdate(prevState, formData) {
   const price = Number(formData.get("price"));
   const url = formData.get("url");
   const example = formData.get("example");
+  const title = formData.get("title");
   const description = formData.get("description");
 
   // check authentication
@@ -23,7 +24,15 @@ export async function platformUpdate(prevState, formData) {
     throw new Error("Not authenticated");
   }
 
-  const validate = Platform({ name, reach, price, url, description, example });
+  const validate = Platform({
+    name,
+    reach,
+    price,
+    url,
+    description,
+    example,
+    title,
+  });
 
   if (!validate.success) {
     return validate;
@@ -43,6 +52,7 @@ export async function platformUpdate(prevState, formData) {
         url,
         description,
         example,
+        title,
       },
     });
   } else {
@@ -59,6 +69,7 @@ export async function platformUpdate(prevState, formData) {
         url,
         description,
         example,
+        title,
       },
     });
   }

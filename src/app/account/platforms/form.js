@@ -89,6 +89,13 @@ export default function Form({ data }) {
               value={edit.example}
             />
 
+            <Input
+              id="title"
+              name="Title of content"
+              error={state?.errors?.title}
+              value={edit.title}
+            />
+
             <Textarea
               id="description"
               name="Description of service"
