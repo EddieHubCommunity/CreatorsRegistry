@@ -83,7 +83,9 @@ export default async function Page({ params }) {
                     </div>
                     <div className="flex items-center gap-x-4 sm:gap-x-6">
                       <a
-                        href={`mailto:${user.email}`}
+                        href={`mailto:${
+                          user.preferredEmail ? user.preferredEmail : user.email
+                        }`}
                         className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                       >
                         Contact

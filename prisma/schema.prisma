@@ -25,12 +25,13 @@ model User {
   Authenticator Authenticator[]
 
   // extra properties
-  username     String           @unique
-  bio          String?
-  website      String?
-  tags         String?
-  views        Int?             @default(0)
-  platforms    Platform[]
+  username            String           @unique
+  bio                 String?
+  website             String?
+  tags                String?
+  views               Int?             @default(0)
+  preferredEmail      String?          @unique
+  platforms           Platform[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

@@ -42,9 +42,17 @@ export default function Form({ user }) {
             <Input
               id="username"
               name="Your unique username"
-              prepend="creators-registry.eddiehub.org/"
+              prepend="creators-registry.eddiehubcommunity.org/"
               error={state?.errors?.username}
               value={user.username}
+            />
+
+            <Input
+              id="preferredEmail"
+              name="Preferred email"
+              prepend={`${user.email} / `}
+              error={state?.errors?.preferredEmail}
+              value={user.preferredEmail}
             />
 
             <Input

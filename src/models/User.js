@@ -10,6 +10,7 @@ export default function User(user) {
       })
       .trim()
       .toLowerCase(),
+    preferredEmail: z.string().email().optional().or(z.literal("")),
     bio: z.string().max(1024),
     website: z.string().url().optional().or(z.literal("")),
     tags: z.string().max(1024).optional(),
@@ -17,6 +18,7 @@ export default function User(user) {
 
   const validatedFields = schema.safeParse({
     username: user.username,
+    preferredEmail: user.preferredEmail,
     bio: user.bio,
     website: user.website,
   });
