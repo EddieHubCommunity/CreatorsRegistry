@@ -1,3 +1,12 @@
+# [0.18.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.17.3...v0.18.0) (2024-06-25)
+
+
+### Features
+
+* override email for profile ([610c827](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/610c8275dcb629793674d8c54021010f606b80bd))
+
+
+
 ## [0.17.3](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.17.2...v0.17.3) (2024-06-25)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * extra info on settings page ([9bf92aa](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/9bf92aa57b446ead54a97d49d64a108e38e24a6d))
-
-
-
-## [0.16.5](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.4...v0.16.5) (2024-06-23)
-
-
-### Bug Fixes
-
-* price text to be specifc ([592dcac](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/592dcac6d0beb26c22b9046993591ab0c8e326d9))
 
 
 
