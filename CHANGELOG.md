@@ -1,3 +1,12 @@
+## [0.17.2](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.17.1...v0.17.2) (2024-06-25)
+
+
+### Bug Fixes
+
+* removed the word 'from' in pricing ([87bc516](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/87bc516b4cd64b0ad2e4d5c14abdab2f54182918))
+
+
+
 ## [0.17.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.17.0...v0.17.1) (2024-06-25)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * form field id separate to name ([08c87d1](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/08c87d14a56e4f0f633e4669642a2c2aa21a86c2))
-
-
-
-## [0.16.3](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.16.2...v0.16.3) (2024-06-23)
-
-
-### Bug Fixes
-
-* when no tags on profile ([387432e](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/387432e473f26ec493d7c5db6490097b404fa3cc))
 
 
 
