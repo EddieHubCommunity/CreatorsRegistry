@@ -94,7 +94,7 @@ export default async function Page({ searchParams }) {
                     message="No results found"
                     details={[
                       "Try adjusting your search parameters.",
-                      "Check for typos or broaden your search criteria.",
+                      "Try to broaden your search criteria.",
                     ]}
                   />
                 )}
