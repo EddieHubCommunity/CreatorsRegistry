@@ -1,3 +1,12 @@
+# [0.20.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.19.0...v0.20.0) (2024-06-26)
+
+
+### Features
+
+* alert when no search results found ([#90](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/90)) ([24c2730](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/24c2730f0f0aac2f6b495fea20bf28e5c1fcf64f))
+
+
+
 # [0.19.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.18.0...v0.19.0) (2024-06-25)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * removed the word 'from' in pricing ([87bc516](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/87bc516b4cd64b0ad2e4d5c14abdab2f54182918))
-
-
-
-## [0.17.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.17.0...v0.17.1) (2024-06-25)
-
-
-### Bug Fixes
-
-* typo in settings form ([fb07638](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/fb07638915fa23e6c3adbfaa52238b447dee3d25))
 
 
 
