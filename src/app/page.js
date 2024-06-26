@@ -6,9 +6,11 @@ import {
   LockClosedIcon,
   WifiIcon,
 } from "@heroicons/react/24/outline";
+import { getServerSession } from "next-auth";
 
 import prisma from "@/models/db";
 
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import Items from "@/components/list/Items";
 import Cta from "@/components/Cta";
 import REACH from "@/config/reach";
@@ -41,6 +43,7 @@ const featuresCampaigns = [
 ];
 
 export default async function Page() {
+  const session = await getServerSession(authOptions);
   const users = await prisma.user.findMany({
     include: {
       platforms: {
@@ -71,11 +74,13 @@ export default async function Page() {
               Content Creators Directory
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
-              <Cta>
-                Are you a Content Creator?
-                <br />
-                Want to get paid?
-              </Cta>
+              {!session && (
+                <Cta>
+                  Are you a Content Creator?
+                  <br />
+                  Want to get paid?
+                </Cta>
+              )}
               <div className="p-6">
                 <div className="mx-auto max-w-2xl lg:text-center">
                   <h2 className="text-base font-semibold leading-7 text-indigo-600">
