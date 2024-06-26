@@ -58,37 +58,7 @@ export default async function Page({ searchParams }) {
             </h2>
             <div className="overflow-hidden rounded-lg bg-white shadow">
               <div className="p-6">
-                {users.length > 0 ? (
-                  <Items
-                    data={users.map((user) => ({
-                      id: user.username,
-                      image: user.image,
-                      url: `/${user.username}`,
-                      urlText: user.name,
-                      description: user.bio,
-                      socials: user.platforms.map((platform) => ({
-                        icon: platform.name,
-                      })),
-                      meta: [
-                        // biggest reach
-                        {
-                          icon: WifiIcon,
-                          text: `Reach ${
-                            REACH().data[
-                              REACH().sortByLargest(user.platforms)[0].reach
-                            ].group
-                          }`,
-                        },
-                        // lowest price
-                        {
-                          icon: ArrowUpIcon,
-                          text: `From $${user.platforms[0].price}`,
-                        },
-                      ],
-                      tags: user.tags?.split(","),
-                    }))}
-                  />
-                ) : (
+                {users.length === 0 && (
                   <Alert
                     type="info"
                     message="No results found"
@@ -98,6 +68,36 @@ export default async function Page({ searchParams }) {
                     ]}
                   />
                 )}
+
+                <Items
+                  data={users.map((user) => ({
+                    id: user.username,
+                    image: user.image,
+                    url: `/${user.username}`,
+                    urlText: user.name,
+                    description: user.bio,
+                    socials: user.platforms.map((platform) => ({
+                      icon: platform.name,
+                    })),
+                    meta: [
+                      // biggest reach
+                      {
+                        icon: WifiIcon,
+                        text: `Reach ${
+                          REACH().data[
+                            REACH().sortByLargest(user.platforms)[0].reach
+                          ].group
+                        }`,
+                      },
+                      // lowest price
+                      {
+                        icon: ArrowUpIcon,
+                        text: `From $${user.platforms[0].price}`,
+                      },
+                    ],
+                    tags: user.tags?.split(","),
+                  }))}
+                />
               </div>
             </div>
           </section>
