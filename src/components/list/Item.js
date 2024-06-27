@@ -48,7 +48,7 @@ export default function Item({ data }) {
                   <FontAwesomeIcon
                     icon={socialIcon(badge.icon)}
                     label={badge.icon}
-                    className="h-6 w-6 rounded-full bg-gray-50 ring-2 ring-white p-2"
+                    className="h-6 w-6 rounded-full bg-gray-50 ring-2 ring-white"
                     style={{ height: 25, width: 25 }}
                   />
                 </dd>
