@@ -1,3 +1,5 @@
+import data from "@/config/app.json";
+
 export default function Footer() {
   return (
     <footer>
@@ -6,7 +8,9 @@ export default function Footer() {
           <span className="block sm:inline">
             &copy; {new Date().getFullYear()} EddieHub
           </span>{" "}
-          <span className="block sm:inline">All rights reserved.</span>
+          <span className="block sm:inline">
+            All rights reserved. | v{data.version}
+          </span>
         </div>
       </div>
     </footer>
