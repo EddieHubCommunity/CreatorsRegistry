@@ -1,9 +1,10 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
-import { SocialIcon } from "react-social-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Badge from "@/components/Badge";
+import socialIcon from "@/config/socialIcon";
 
 export default function Item({ data }) {
   return (
@@ -20,9 +21,10 @@ export default function Item({ data }) {
             />
           )}
           {data.icon && (
-            <SocialIcon
-              network={data.icon}
-              className="h-12 w-12 flex-none rounded-full bg-gray-50"
+            <FontAwesomeIcon
+              icon={socialIcon(data.icon)}
+              className="h-12 w-12 flex-none rounded-full bg-gray-50 p-2"
+              style={{ height: 50, width: 50 }}
             />
           )}
           <div className="min-w-0 flex-auto">
@@ -43,10 +45,10 @@ export default function Item({ data }) {
             {data.socials &&
               data.socials.map((badge, key) => (
                 <dd key={key}>
-                  <SocialIcon
-                    network={badge.icon}
+                  <FontAwesomeIcon
+                    icon={socialIcon(badge.icon)}
                     label={badge.icon}
-                    className="h-6 w-6 rounded-full bg-gray-50 ring-2 ring-white"
+                    className="h-6 w-6 rounded-full bg-gray-50 ring-2 ring-white p-2"
                     style={{ height: 25, width: 25 }}
                   />
                 </dd>

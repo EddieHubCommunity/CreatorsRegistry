@@ -16,6 +16,14 @@
     "twitch": {
       "value": "twitch",
       "display": "Twitch"
+    },
+    "devto": {
+      "value": "devto",
+      "display": "Dev.to"
+    },
+    "hashnode": {
+      "value": "hashnode",
+      "display": "Hashnode"
     }
   },
   "reach": {

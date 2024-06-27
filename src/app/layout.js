@@ -3,6 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import prisma from "@/models/db";
 
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 import { classNames } from "@/utils/classNames";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import Header from "@/components/Header";

@@ -19,6 +19,11 @@
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.1.0",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@headlessui/react": "^2.0.4",
     "@heroicons/react": "^2.1.3",
     "@ngneat/falso": "^7.2.0",
@@ -28,7 +33,6 @@
     "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
-    "react-social-icons": "^6.16.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
