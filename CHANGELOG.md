@@ -1,3 +1,12 @@
+## [0.21.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.21.0...v0.21.1) (2024-06-27)
+
+
+### Bug Fixes
+
+* grouped social icons ([e66f963](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/e66f963fe8f645eb7b89b4e962124690b2903752))
+
+
+
 # [0.21.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.20.4...v0.21.0) (2024-06-27)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * login cta not shown when logged in ([92cbd5a](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/92cbd5a6eb1550abd11785cb9bd30e5b050f9d65))
-
-
-
-## [0.20.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.20.0...v0.20.1) (2024-06-26)
-
-
-### Bug Fixes
-
-* search no results refactored ([b269d01](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/b269d01e340472bbe2a161b6850768529ef068d7))
 
 
 
