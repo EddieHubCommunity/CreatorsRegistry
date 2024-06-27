@@ -1,3 +1,12 @@
+# [0.21.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.20.4...v0.21.0) (2024-06-27)
+
+
+### Features
+
+* refactored icons included blog platforms ([5aac369](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/5aac3690bedd9d64281bf5f572151313baf996c8))
+
+
+
 ## [0.20.4](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.20.3...v0.20.4) (2024-06-27)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * search no results refactored ([b269d01](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/b269d01e340472bbe2a161b6850768529ef068d7))
-
-
-
-# [0.20.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.19.0...v0.20.0) (2024-06-26)
-
-
-### Features
-
-* alert when no search results found ([#90](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/90)) ([24c2730](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/24c2730f0f0aac2f6b495fea20bf28e5c1fcf64f))
 
 
 
