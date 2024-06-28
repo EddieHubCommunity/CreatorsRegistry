@@ -16,8 +16,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { classNames } from "@/utils/classNames";
+import socialIcon from "@/config/socialIcon";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -65,6 +67,19 @@ export default function Header({ session, user }) {
 
               {/* Right section on desktop */}
               <div className="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
+                <Link
+                  className="relative flex-shrink-0 rounded-full  p-1 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
+                  href="https://github.com/EddieHubCommunity/CreatorsRegistry"
+                >
+                  <span className="absolute -inset-1.5" />
+                  <span className="sr-only">GitHub Repo</span>
+                  <FontAwesomeIcon
+                    icon={socialIcon("github")}
+                    className="h-6 w-6"
+                    style={{ height: 25, width: 25 }}
+                  />
+                </Link>
+
                 {!session && (
                   <button
                     type="button"

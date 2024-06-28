@@ -1,5 +1,6 @@
 import {
   faDev,
+  faGithub,
   faHashnode,
   faTwitch,
   faTwitter,
@@ -24,6 +25,9 @@ export default function socialIcon(name) {
       break;
     case "devto":
       icon = faDev;
+      break;
+    case "github":
+      icon = faGithub;
       break;
   }
   return icon;
