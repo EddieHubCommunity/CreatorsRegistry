@@ -1,3 +1,12 @@
+# [0.22.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.21.1...v0.22.0) (2024-06-28)
+
+
+### Features
+
+* version number in footer ([#99](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/99)) ([285fcef](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/285fcef5c6e31f65092f897153b00404153b6545))
+
+
+
 ## [0.21.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.21.0...v0.21.1) (2024-06-27)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * issue template auto assign label ([e057b75](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/e057b759cd5ba608a9003b2212e9a65094fb1459))
-
-
-
-## [0.20.2](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.20.1...v0.20.2) (2024-06-26)
-
-
-### Bug Fixes
-
-* login cta not shown when logged in ([92cbd5a](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/92cbd5a6eb1550abd11785cb9bd30e5b050f9d65))
 
 
 
