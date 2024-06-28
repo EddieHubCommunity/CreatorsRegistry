@@ -1,3 +1,12 @@
+# [0.23.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.22.0...v0.23.0) (2024-06-28)
+
+
+### Features
+
+* github icon link in header ([d7785ca](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/d7785caab800b70e536c7e242b38aa581c60ecc4))
+
+
+
 # [0.22.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.21.1...v0.22.0) (2024-06-28)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * issue template bug auto label ([f17d946](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/f17d9461e03a7bd33932f959240a34aecd122cfd))
-
-
-
-## [0.20.3](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.20.2...v0.20.3) (2024-06-27)
-
-
-### Bug Fixes
-
-* issue template auto assign label ([e057b75](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/e057b759cd5ba608a9003b2212e9a65094fb1459))
 
 
 
