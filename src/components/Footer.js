@@ -9,7 +9,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} EddieHub
           </span>{" "}
           <span className="block sm:inline">
-            All rights reserved. | v{data.version}
+            All rights reserved | v{data.version}
           </span>
         </div>
       </div>
