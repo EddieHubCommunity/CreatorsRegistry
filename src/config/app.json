@@ -24,6 +24,10 @@
     "hashnode": {
       "value": "hashnode",
       "display": "Hashnode"
+    },
+    "medium": {
+      "value": "medium",
+      "display": "Medium"
     }
   },
   "reach": {
