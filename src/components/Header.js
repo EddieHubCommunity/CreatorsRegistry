@@ -73,16 +73,11 @@ export default function Header({ session, user }) {
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">GitHub Repo</span>
-                  {(() => {
-                    const { icon } = socialIcon("github");
-                    return (
-                      <FontAwesomeIcon
-                        icon={icon}
-                        className="h-12 w-12 flex-none rounded-full bg-gray-50 p-2"
-                        style={{ height: 50, width: 50 }}
-                      />
-                    );
-                  })()}
+                  <FontAwesomeIcon
+                    icon={socialIcon("github").icon}
+                    className="h-6 w-6"
+                    style={{ height: 25, width: 25 }}
+                  />
                 </Link>
 
                 {!session && (

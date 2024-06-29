@@ -20,17 +20,13 @@ export default function Item({ data }) {
               height={48}
             />
           )}
-          {data.icon &&
-            (() => {
-              const { icon } = socialIcon(data.icon);
-              return (
-                <FontAwesomeIcon
-                  icon={icon}
-                  className="h-12 w-12 flex-none rounded-full bg-gray-50 p-2"
-                  style={{ height: 50, width: 50 }}
-                />
-              );
-            })()}
+          {data.icon && (
+            <FontAwesomeIcon
+              icon={socialIcon(data.icon).icon}
+              className="h-12 w-12 flex-none rounded-full bg-gray-50 p-2"
+              style={{ height: 50, width: 50 }}
+            />
+          )}
           <div className="min-w-0 flex-auto">
             <p className="text-sm font-semibold leading-6 text-gray-900">
               <Link href={data.url}>
