@@ -43,16 +43,19 @@ export default function Item({ data }) {
           <div className="flex -space-x-0.5">
             <dt className="sr-only">Social platforms</dt>
             {data.socials &&
-              data.socials.map((badge, key) => (
-                <dd key={key}>
-                  <FontAwesomeIcon
-                    icon={socialIcon(badge.icon)}
-                    label={badge.icon}
-                    className="h-6 w-6 rounded-full bg-gray-50 ring-2 ring-white"
-                    style={{ height: 25, width: 25 }}
-                  />
-                </dd>
-              ))}
+              data.socials.map((badge, key) => {
+                const { icon, color } = socialIcon(badge.icon);
+                return (
+                  <dd key={key}>
+                    <FontAwesomeIcon
+                      icon={icon}
+                      label={badge.icon}
+                      className="h-6 w-6 rounded-full bg-gray-50 ring-2 ring-white"
+                      style={{ height: 25, width: 25, color: color }}
+                    />
+                  </dd>
+                );
+              })}
             <ChevronRightIcon
               className="h-5 w-5 flex-none text-gray-400 hidden sm:block"
               aria-hidden="true"
