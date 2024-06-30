@@ -15,7 +15,7 @@ export default function Item({ data }) {
             <Image
               className="h-12 w-12 flex-none rounded-full bg-gray-50"
               src={data.image}
-              alt={data.description}
+              alt={`${data.urlText} avatar`}
               width={48}
               height={48}
             />
