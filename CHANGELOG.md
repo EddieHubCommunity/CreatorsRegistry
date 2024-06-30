@@ -1,3 +1,12 @@
+## [0.25.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.25.0...v0.25.1) (2024-06-30)
+
+
+### Bug Fixes
+
+* alt text on item img ([#113](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/113)) ([e9f298b](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/e9f298b38acd0de3a0ac9916de658018515f02b5))
+
+
+
 # [0.25.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.24.0...v0.25.0) (2024-06-30)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * version number in footer ([#99](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/99)) ([285fcef](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/285fcef5c6e31f65092f897153b00404153b6545))
-
-
-
-## [0.21.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.21.0...v0.21.1) (2024-06-27)
-
-
-### Bug Fixes
-
-* grouped social icons ([e66f963](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/e66f963fe8f645eb7b89b4e962124690b2903752))
 
 
 
