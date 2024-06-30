@@ -1,5 +1,5 @@
-import data from '@/config/app.json';
-import Link from 'next/link';
+import data from "@/config/app.json";
+import Link from "next/link";
 
 export default function Footer() {
   const githubUrl = "https://github.com/EddieHubCommunity/CreatorsRegistry";
