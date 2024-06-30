@@ -1,5 +1,5 @@
 import data from "@/config/app.json";
-import Link from "next/link";
+import ExternalLink from "@/components/ExternalLink";
 
 export default function Footer() {
   const githubUrl = "https://github.com/EddieHubCommunity/CreatorsRegistry";
@@ -11,7 +11,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} EddieHub All rights reserved | v
           {data.version}
         </div>
-        <Link href={githubUrl}>{githubUrl}</Link>
+        <ExternalLink href={githubUrl}>{githubUrl}</ExternalLink>
       </div>
     </footer>
   );
