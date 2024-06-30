@@ -12,7 +12,6 @@ export default function Footer() {
         </div>
         <Link href={githubUrl}>
             {githubUrl}
-          
         </Link>
       </div>
     </footer>
