@@ -57,11 +57,6 @@ We welcome everyone to review Pull Requests, it is a great way to learn, network
 
 ## Maintainers
 
-import DocsLayout from "@components/layouts/DocsLayout.js";
-import Link from "@components/Link";
-
-## Maintainers
-
 ### Criteria for becoming a Maintainer
 
 1. You are a member of the EddieHub Community
