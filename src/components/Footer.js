@@ -11,9 +11,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} EddieHub All rights reserved | v
           {data.version}
         </div>
-        <Link href={githubUrl}>
-            {githubUrl}
-        </Link>
+        <Link href={githubUrl}>{githubUrl}</Link>
       </div>
     </footer>
   );
