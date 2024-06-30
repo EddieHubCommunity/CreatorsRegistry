@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="text-sm text-gray-500">
           &copy; {new Date().getFullYear()} EddieHub All rights reserved | v{data.version}
         </div>
-        <Link href={githubUrl} passHref={true}>
+        <Link href={githubUrl}>
             {githubUrl}
           
         </Link>
