@@ -1,3 +1,12 @@
+# [0.24.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.23.0...v0.24.0) (2024-06-29)
+
+
+### Features
+
+* medium blog logo ([c45b87d](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/c45b87d098473d621f5b44b0beea6c7e2d1522d0))
+
+
+
 # [0.23.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.22.0...v0.23.0) (2024-06-28)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * refactored icons included blog platforms ([5aac369](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/5aac3690bedd9d64281bf5f572151313baf996c8))
-
-
-
-## [0.20.4](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.20.3...v0.20.4) (2024-06-27)
-
-
-### Bug Fixes
-
-* issue template bug auto label ([f17d946](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/f17d9461e03a7bd33932f959240a34aecd122cfd))
 
 
 
