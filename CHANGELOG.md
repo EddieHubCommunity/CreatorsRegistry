@@ -1,3 +1,12 @@
+# [0.25.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.24.0...v0.25.0) (2024-06-30)
+
+
+### Features
+
+* GitHub link in footer ([#110](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/110)) ([ddbe0cb](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/ddbe0cbd0982e815be857728de4771083afc9b57))
+
+
+
 # [0.24.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.23.0...v0.24.0) (2024-06-29)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * grouped social icons ([e66f963](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/e66f963fe8f645eb7b89b4e962124690b2903752))
-
-
-
-# [0.21.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.20.4...v0.21.0) (2024-06-27)
-
-
-### Features
-
-* refactored icons included blog platforms ([5aac369](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/5aac3690bedd9d64281bf5f572151313baf996c8))
 
 
 
