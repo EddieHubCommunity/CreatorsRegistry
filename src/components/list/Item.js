@@ -24,7 +24,11 @@ export default function Item({ data }) {
             <FontAwesomeIcon
               icon={socialIcon(data.icon).icon}
               className="h-12 w-12 flex-none rounded-full bg-gray-50 p-2"
-              style={{ height: 50, width: 50 }}
+              style={{
+                height: 50,
+                width: 50,
+                color: `${socialIcon(data.icon).color}`,
+              }}
             />
           )}
           <div className="min-w-0 flex-auto">
