@@ -1,5 +1,5 @@
 {
-  "version": "0.23.0",
+  "version": "0.25.1",
   "platforms": {
     "twitter": {
       "value": "twitter",
@@ -24,6 +24,10 @@
     "hashnode": {
       "value": "hashnode",
       "display": "Hashnode"
+    },
+    "medium": {
+      "value": "medium",
+      "display": "Medium"
     }
   },
   "reach": {

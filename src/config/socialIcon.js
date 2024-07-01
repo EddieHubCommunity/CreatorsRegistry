@@ -2,6 +2,7 @@ import {
   faDev,
   faGithub,
   faHashnode,
+  faMedium,
   faTwitch,
   faTwitter,
   faYoutube,
@@ -35,6 +36,9 @@ export default function socialIcon(name) {
     case "github":
       icon = faGithub;
       color = "#DAD7CB";
+      break;
+    case "medium":
+      icon = faMedium;
       break;
   }
   return { icon, color };
