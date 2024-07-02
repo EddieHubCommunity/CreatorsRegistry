@@ -27,7 +27,7 @@ export default function Item({ data }) {
               style={{
                 height: 50,
                 width: 50,
-                color: `${socialIcon(data.icon).color}`,
+                color: socialIcon(data.icon).color,
               }}
             />
           )}
