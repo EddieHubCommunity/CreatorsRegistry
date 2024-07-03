@@ -135,7 +135,7 @@ export default async function Page({ params }) {
               <div className="p-6">{user.bio}</div>
 
               <ul className="flex flex-row gap-2 justify-center pb-2">
-                {user.tags.split(",").map((tag) => (
+                {user.tags && user.tags.split(",").map((tag) => (
                   <li key={tag}>
                     <Badge text={tag} />
                   </li>
