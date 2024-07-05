@@ -1,3 +1,12 @@
+## [0.26.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.26.0...v0.26.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* make external links open in new tabs ([#114](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/114)) ([51d3139](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/51d31398caa01cb762e1301ac6f210da6ebdae3d)), closes [#107](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/107)
+
+
+
 # [0.26.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.25.1...v0.26.0) (2024-07-05)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * medium blog logo ([c45b87d](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/c45b87d098473d621f5b44b0beea6c7e2d1522d0))
-
-
-
-# [0.23.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.22.0...v0.23.0) (2024-06-28)
-
-
-### Features
-
-* github icon link in header ([d7785ca](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/d7785caab800b70e536c7e242b38aa581c60ecc4))
 
 
 
