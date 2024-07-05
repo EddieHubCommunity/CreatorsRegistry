@@ -1,10 +1,10 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
-import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Badge from "@/components/Badge";
 import socialIcon from "@/config/socialIcon";
+import ExternalLink from "@/components/ExternalLink";
 
 export default function Item({ data }) {
   return (
@@ -33,10 +33,10 @@ export default function Item({ data }) {
           )}
           <div className="min-w-0 flex-auto">
             <p className="text-sm font-semibold leading-6 text-gray-900">
-              <Link href={data.url}>
+              <ExternalLink href={data.url}>
                 <span className="absolute inset-x-0 -top-px bottom-0" />
                 {data.urlText}
-              </Link>
+              </ExternalLink>
             </p>
             <p className="mt-1 flex text-xs leading-5 text-gray-500">
               {data.description}
