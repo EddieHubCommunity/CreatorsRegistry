@@ -1,3 +1,12 @@
+# [0.26.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.25.1...v0.26.0) (2024-07-05)
+
+
+### Features
+
+* color to social media icons ([#106](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/106)) ([cc93237](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/cc932377cc1e6346dbcaf96addfece9a0daab149))
+
+
+
 ## [0.25.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.25.0...v0.25.1) (2024-06-30)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * github icon link in header ([d7785ca](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/d7785caab800b70e536c7e242b38aa581c60ecc4))
-
-
-
-# [0.22.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.21.1...v0.22.0) (2024-06-28)
-
-
-### Features
-
-* version number in footer ([#99](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/99)) ([285fcef](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/285fcef5c6e31f65092f897153b00404153b6545))
 
 
 
