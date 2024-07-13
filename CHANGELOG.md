@@ -1,3 +1,12 @@
+## [0.26.2](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.26.1...v0.26.2) (2024-07-13)
+
+
+### Bug Fixes
+
+* Dockerfile to use multi-stage build ([#121](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/121)) ([b111064](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/b111064e13fe45b455da06fd2b330c7fcfc2cbc3))
+
+
+
 ## [0.26.1](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.26.0...v0.26.1) (2024-07-05)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * GitHub link in footer ([#110](https://github.com/EddieHubCommunity/CreatorsRegistry/issues/110)) ([ddbe0cb](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/ddbe0cbd0982e815be857728de4771083afc9b57))
-
-
-
-# [0.24.0](https://github.com/EddieHubCommunity/CreatorsRegistry/compare/v0.23.0...v0.24.0) (2024-06-29)
-
-
-### Features
-
-* medium blog logo ([c45b87d](https://github.com/EddieHubCommunity/CreatorsRegistry/commit/c45b87d098473d621f5b44b0beea6c7e2d1522d0))
 
 
 
