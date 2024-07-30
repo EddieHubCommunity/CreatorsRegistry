@@ -2,6 +2,7 @@ services:
   server:
     build:
       context: .
+      dockerfile: Dockerfile.dev
     env_file:
       - .env
     environment: # To override the DB URL in the .env file
@@ -13,6 +14,7 @@ services:
     networks:
       - creators-registry
     container_name: server
+    
   db:
     image: postgres:16
     container_name: db
